@@ -260,7 +260,7 @@ const Sobre = () => {
               Junte-se a nós nesta jornada revolucionária e seja um dos primeiros a experimentar nossa abordagem inovadora
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="/contato" className="fire-gradient bg-white text-fire-primary hover:bg-gray-100 px-8 py-4 rounded-full text-lg font-semibold hover-lift transition-all duration-300">
+              <a href="/contato" className="fire-gradient text-white px-8 py-4 rounded-full text-lg font-semibold hover-lift transition-all duration-300 hover:brightness-110">
                 Começar Nosso Projeto
               </a>
               <a href="/servicos" className="border-2 border-white text-white hover:bg-white hover:text-fire-primary px-8 py-4 rounded-full text-lg font-semibold hover-lift transition-all duration-300">
