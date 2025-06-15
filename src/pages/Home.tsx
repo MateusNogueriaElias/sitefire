@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import ScrollReveal from '@/components/ScrollReveal';
+import WhatsAppFloat from '@/components/WhatsAppFloat';
 
 const Home = () => {
   const services = [
@@ -11,21 +12,21 @@ const Home = () => {
       title: "Landing Pages de Alto Impacto",
       description: "Páginas que convertem visitantes em clientes com design irresistível e estratégia comprovada",
       highlight: "Aumento de 400% nas conversões",
-      color: "from-orange-500 to-red-500"
+      color: "from-blue-500 to-blue-700"
     },
     {
       icon: <Target className="h-10 w-10 text-white" />,
       title: "Sites WordPress Profissionais", 
       description: "Sites completos e otimizados que posicionam sua marca como líder no mercado",
       highlight: "Entrega em até 5 dias",
-      color: "from-red-500 to-pink-500"
+      color: "from-blue-600 to-indigo-600"
     },
     {
       icon: <Rocket className="h-10 w-10 text-white" />,
       title: "Desenvolvimento Exclusivo",
       description: "Soluções únicas e personalizadas que fazem sua empresa se destacar da concorrência",
       highlight: "100% sob medida",
-      color: "from-pink-500 to-purple-500"
+      color: "from-indigo-500 to-purple-600"
     }
   ];
 
@@ -71,7 +72,9 @@ const Home = () => {
 
   return (
     <div className="overflow-hidden">
-      {/* Hero Section - Completely Redesigned */}
+      <WhatsAppFloat />
+      
+      {/* Hero Section - With updated colors */}
       <ScrollReveal direction="fade">
         <section className="relative min-h-screen flex items-center justify-center particle-bg">
           <div className="absolute inset-0 fire-gradient opacity-95"></div>
@@ -79,31 +82,31 @@ const Home = () => {
           
           {/* Floating Elements */}
           <div className="absolute top-20 left-10 animate-float">
-            <Sparkles className="h-16 w-16 text-yellow-300 opacity-60" />
+            <Sparkles className="h-16 w-16 text-blue-300 opacity-60" />
           </div>
           <div className="absolute top-1/3 right-20 animate-float" style={{ animationDelay: '2s' }}>
             <Zap className="h-20 w-20 text-white opacity-40" />
           </div>
           <div className="absolute bottom-1/4 left-1/4 animate-float" style={{ animationDelay: '4s' }}>
-            <Target className="h-12 w-12 text-yellow-300 opacity-50" />
+            <Target className="h-12 w-12 text-blue-300 opacity-50" />
           </div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
             <div className="animate-fade-in-up">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-2 mb-8">
-                <Sparkles className="h-4 w-4 mr-2 text-yellow-300" />
+                <Sparkles className="h-4 w-4 mr-2 text-blue-300" />
                 <span className="text-sm font-medium">Agência Digital #1 em Resultados</span>
               </div>
               
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-poppins mb-8 leading-tight">
                 Sua Empresa
-                <span className="block text-red-800 font-black drop-shadow-2xl">Dominando</span>
-                <span className="block text-yellow-300">a Internet</span>
+                <span className="block text-blue-300 font-black drop-shadow-2xl">Dominando</span>
+                <span className="block text-blue-200">a Internet</span>
               </h1>
               
               <p className="text-xl md:text-3xl mb-12 max-w-4xl mx-auto opacity-95 font-light leading-relaxed">
                 Criamos sites que não apenas impressionam, mas 
-                <span className="font-bold text-yellow-300"> transformam visitantes em clientes fiéis</span> 
+                <span className="font-bold text-blue-300"> transformam visitantes em clientes fiéis</span> 
                 e fazem sua receita explodir
               </p>
               
@@ -127,7 +130,7 @@ const Home = () => {
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center animate-scale-in" style={{ animationDelay: `${index * 200}ms` }}>
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full mb-4">
-                      <stat.icon className="h-8 w-8 text-yellow-300" />
+                      <stat.icon className="h-8 w-8 text-blue-300" />
                     </div>
                     <div className="text-3xl md:text-4xl font-bold mb-2">{stat.number}</div>
                     <div className="text-sm opacity-90 font-medium">{stat.label}</div>
