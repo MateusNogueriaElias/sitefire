@@ -109,9 +109,9 @@ const Home = () => {
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
                 <Link to="/contato">
-                  <Button size="lg" className="bg-white text-fire-primary hover:bg-gray-100 px-12 py-6 text-xl font-bold hover-lift hover-glow rounded-full shadow-2xl">
+                  <Button size="lg" className="bg-white text-fire-dark hover:bg-gray-100 hover:text-fire-primary px-12 py-6 text-xl font-bold hover-lift hover-glow rounded-full shadow-2xl">
                     <Rocket className="mr-3 h-6 w-6" />
-                    Explodir Minhas Vendas Agora
+                    Começar Nosso Projeto
                     <ArrowRight className="ml-3 h-6 w-6" />
                   </Button>
                 </Link>
@@ -348,25 +348,24 @@ const Home = () => {
                 </div>
                 
                 <h2 className="text-4xl md:text-6xl font-bold font-poppins mb-8 leading-tight">
-                  Pronto para <span className="text-yellow-300">Dominar</span> Seu Mercado?
+                  Pronto para <span className="text-yellow-300">Fazer Parte</span> da Nossa História de Sucesso?
                 </h2>
                 
                 <p className="text-xl md:text-2xl mb-12 opacity-95 max-w-3xl mx-auto leading-relaxed">
-                  Não deixe seus concorrentes saírem na frente. 
-                  <span className="font-bold text-yellow-300"> Vamos criar algo extraordinário juntos!</span>
+                  Vamos juntos criar o próximo capítulo de transformação digital do seu negócio
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                   <Link to="/contato">
-                    <Button size="lg" className="bg-white text-fire-primary hover:bg-gray-100 px-12 py-6 text-xl font-bold hover-lift hover-glow rounded-full shadow-2xl">
+                    <Button size="lg" className="bg-white text-fire-dark hover:bg-gray-100 hover:text-fire-primary px-12 py-6 text-xl font-bold hover-lift hover-glow rounded-full shadow-2xl">
                       <Rocket className="mr-3 h-6 w-6" />
-                      Solicitar Proposta Gratuita
+                      Nosso Projeto
                       <ArrowRight className="ml-3 h-6 w-6" />
                     </Button>
                   </Link>
                   <Link to="/servicos">
                     <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-fire-primary px-12 py-6 text-xl font-bold hover-lift rounded-full backdrop-blur-sm bg-transparent">
-                      Ver Todos os Serviços
+                      Ver Nossos Serviços
                     </Button>
                   </Link>
                 </div>
