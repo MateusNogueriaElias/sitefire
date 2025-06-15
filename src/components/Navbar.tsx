@@ -65,7 +65,11 @@ const Navbar = () => {
               <span className="text-2xl font-bold font-poppins fire-text-gradient group-hover:scale-105 transition-transform duration-300">
                 Fire Dominios
               </span>
-              <span className="text-xs text-gray-500 font-medium tracking-wide">Digital Excellence</span>
+              <span className={`text-xs font-medium tracking-wide transition-colors duration-300 ${
+                isScrolled ? 'text-gray-600' : 'text-white/80'
+              }`}>
+                Digital Excellence
+              </span>
             </div>
           </button>
 
@@ -78,7 +82,7 @@ const Navbar = () => {
                 className={`font-semibold transition-all duration-300 relative group px-4 py-2 rounded-full ${
                   isActive(item.path)
                     ? 'text-fire-primary bg-fire-gradient-soft'
-                    : 'text-gray-700 hover:text-fire-primary hover:bg-fire-gradient-soft'
+                    : `${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-fire-primary hover:bg-fire-gradient-soft`
                 }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
@@ -104,7 +108,9 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-fire-primary transition-all duration-300 p-2 rounded-full hover:bg-fire-gradient-soft"
+              className={`transition-all duration-300 p-2 rounded-full hover:bg-fire-gradient-soft ${
+                isScrolled ? 'text-gray-700 hover:text-fire-primary' : 'text-white hover:text-fire-primary'
+              }`}
             >
               {isMenuOpen ? 
                 <X size={28} className="animate-scale-in" /> : 
