@@ -7,28 +7,28 @@ import { Card, CardContent } from '@/components/ui/card';
 const Home = () => {
   const services = [
     {
-      icon: <Zap className="h-12 w-12 text-white" />,
-      title: "Landing Pages que VENDEM",
-      description: "Páginas que hipnotizam seus visitantes e os transformam em clientes pagantes em segundos",
-      highlight: "500% + Vendas",
-      urgency: "ÚLTIMAS VAGAS",
-      color: "fire-gradient-intense"
+      icon: <Zap className="h-10 w-10 text-white" />,
+      title: "Landing Pages Profissionais",
+      description: "Páginas elegantes que convertem visitantes em clientes através de design inteligente e estratégico",
+      highlight: "Alta Conversão",
+      urgency: "Vagas Limitadas",
+      color: "premium-gradient"
     },
     {
-      icon: <Crown className="h-12 w-12 text-white" />,
-      title: "Sites WordPress DOMINANTES", 
-      description: "Websites que fazem seus concorrentes chorarem de inveja e seus clientes implorarem por mais",
-      highlight: "Autoridade Total",
-      urgency: "OFERTA LIMITADA",
-      color: "fire-gradient-intense"
+      icon: <Crown className="h-10 w-10 text-white" />,
+      title: "Sites WordPress Premium", 
+      description: "Websites sofisticados que elevam sua marca e estabelecem autoridade no mercado",
+      highlight: "Design Premium",
+      urgency: "Oferta Especial",
+      color: "premium-gradient"
     },
     {
-      icon: <Gem className="h-12 w-12 text-white" />,
-      title: "Desenvolvimento EXCLUSIVO",
-      description: "Soluções únicas que fazem sua marca ser lembrada para sempre na mente dos clientes",
-      highlight: "100% Único",
-      urgency: "SÓ 3 VAGAS",
-      color: "fire-gradient-intense"
+      icon: <Gem className="h-10 w-10 text-white" />,
+      title: "Desenvolvimento Personalizado",
+      description: "Soluções exclusivas desenvolvidas especificamente para as necessidades do seu negócio",
+      highlight: "100% Personalizado",
+      urgency: "Poucas Vagas",
+      color: "premium-gradient"
     }
   ];
 
@@ -36,130 +36,130 @@ const Home = () => {
     {
       name: "Carlos Mendes",
       company: "TechStart Solutions",
-      content: "IMPRESSIONANTE! Em 30 dias meu faturamento TRIPLICOU. Nunca vi nada igual. Todos os meus concorrentes estão perguntando onde eu fiz meu site!",
+      content: "Resultado fantástico! Em 30 dias consegui triplicar meu faturamento. O design ficou incrível e a funcionalidade superou todas as expectativas.",
       rating: 5,
       avatar: "👨‍💼",
-      result: "300% LUCRO",
+      result: "300% Crescimento",
       timeframe: "30 dias"
     },
     {
       name: "Marina Silva",
       company: "Boutique Elegance",
-      content: "Meu Deus! O site ficou TÃO perfeito que eu mesma fico babando olhando. As vendas EXPLODIRAM e agora sou referência no mercado!",
+      content: "Simplesmente perfeito! O site ficou elegante e as vendas aumentaram significativamente. Agora sou referência no meu segmento.",
       rating: 5,
       avatar: "👩‍💼",
-      result: "500% VENDAS",
+      result: "500% Vendas",
       timeframe: "45 dias"
     },
     {
       name: "Pedro Oliveira",
       company: "Consultoria Premium",
-      content: "SENSACIONAL! Agora sou visto como o EXPERT da área. Minha agenda lotou e preciso contratar mais funcionários. Melhor investimento da minha vida!",
+      content: "Excelente trabalho! Minha credibilidade aumentou muito e agora sou visto como especialista na área. Recomendo sem dúvidas.",
       rating: 5,
       avatar: "👨‍🎓",
-      result: "400% LEADS",
+      result: "400% Leads",
       timeframe: "60 dias"
     }
   ];
 
   const stats = [
-    { number: "847%", label: "Aumento Médio em Vendas", icon: TrendingUp, color: "text-green-400" },
-    { number: "2.3M", label: "Faturamento Gerado", icon: DollarSign, color: "text-yellow-400" },
+    { number: "847%", label: "Aumento Médio em Vendas", icon: TrendingUp, color: "text-emerald-400" },
+    { number: "2.3M", label: "Faturamento Gerado", icon: DollarSign, color: "text-amber-400" },
     { number: "24h", label: "Para Começar SEU Projeto", icon: Clock, color: "text-blue-400" },
-    { number: "100%", label: "Satisfação GARANTIDA", icon: Trophy, color: "text-purple-400" }
+    { number: "100%", label: "Satisfação Garantida", icon: Trophy, color: "text-purple-400" }
   ];
 
   const benefits = [
-    "Design que HIPNOTIZA visitantes",
-    "Tecnologia de ELITE mundial", 
-    "SEO que DOMINA o Google",
-    "Suporte VIP 24/7/365",
-    "Entrega GARANTIDA no prazo",
-    "ROI COMPROVADO cientificamente"
+    "Design elegante e profissional",
+    "Tecnologia de ponta", 
+    "SEO otimizado para resultados",
+    "Suporte técnico especializado",
+    "Entrega dentro do prazo",
+    "ROI comprovado"
   ];
 
   const urgencyElements = [
-    { icon: <AlertTriangle className="h-5 w-5" />, text: "Apenas 7 vagas este mês", color: "text-red-400" },
-    { icon: <Clock className="h-5 w-5" />, text: "Promoção acaba em 48h", color: "text-orange-400" },
-    { icon: <Eye className="h-5 w-5" />, text: "1.247 pessoas vendo agora", color: "text-blue-400" }
+    { icon: <Eye className="h-4 w-4" />, text: "247 pessoas interessadas", color: "text-blue-400" },
+    { icon: <Clock className="h-4 w-4" />, text: "Oferta por tempo limitado", color: "text-amber-400" },
+    { icon: <Heart className="h-4 w-4" />, text: "Vagas limitadas este mês", color: "text-rose-400" }
   ];
 
   return (
     <div className="overflow-hidden bg-black text-white">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center">
-        {/* Elementos Flutuantes Magnéticos */}
-        <div className="absolute top-20 left-10 animate-float-intense opacity-40">
-          <Sparkles className="h-20 w-20 text-yellow-400 animate-magnetic-pull" />
+        {/* Elementos Flutuantes Elegantes */}
+        <div className="absolute top-20 left-10 animate-gentle-float opacity-20">
+          <Sparkles className="h-16 w-16 text-amber-400 animate-soft-pulse" />
         </div>
-        <div className="absolute top-1/3 right-20 animate-float-intense opacity-30" style={{ animationDelay: '1s' }}>
-          <Crown className="h-24 w-24 text-yellow-500 animate-magnetic-pull" />
+        <div className="absolute top-1/3 right-20 animate-gentle-float opacity-15" style={{ animationDelay: '2s' }}>
+          <Crown className="h-20 w-20 text-yellow-500 animate-soft-pulse" />
         </div>
-        <div className="absolute bottom-1/4 left-1/4 animate-float-intense opacity-35" style={{ animationDelay: '2s' }}>
-          <DollarSign className="h-16 w-16 text-green-400 animate-magnetic-pull" />
+        <div className="absolute bottom-1/4 left-1/4 animate-gentle-float opacity-20" style={{ animationDelay: '4s' }}>
+          <DollarSign className="h-14 w-14 text-emerald-400 animate-soft-pulse" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in-up">
-            {/* Elementos de Urgência */}
+            {/* Elementos de Urgência Suaves */}
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {urgencyElements.map((element, index) => (
-                <div key={index} className={`glass-morphism rounded-full px-4 py-2 flex items-center space-x-2 animate-urgent-glow ${element.color}`}>
+                <div key={index} className={`glass-elegant rounded-full px-4 py-2 flex items-center space-x-2 animate-elegant-glow ${element.color}`}>
                   {element.icon}
-                  <span className="text-sm font-bold">{element.text}</span>
+                  <span className="text-sm font-medium">{element.text}</span>
                 </div>
               ))}
             </div>
             
-            <div className="glass-morphism rounded-full px-8 py-4 mb-12 inline-block pulsing-border">
+            <div className="glass-premium rounded-full px-8 py-4 mb-12 inline-block elegant-border">
               <div className="flex items-center space-x-3">
-                <Crown className="h-6 w-6 text-yellow-400 animate-magnetic-pull" />
-                <span className="text-lg font-bold magnetic-text">🔥 AGÊNCIA #1 DO BRASIL 🔥</span>
-                <Trophy className="h-6 w-6 text-yellow-400 animate-magnetic-pull" />
+                <Crown className="h-5 w-5 text-amber-400 animate-soft-pulse" />
+                <span className="text-lg font-bold premium-text">🏆 AGÊNCIA PREMIUM DO BRASIL 🏆</span>
+                <Trophy className="h-5 w-5 text-amber-400 animate-soft-pulse" />
               </div>
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-black font-playfair mb-8 leading-tight">
-              <span className="block hypnotic-text">PARE de Perder</span>
-              <span className="block magnetic-text text-9xl">DINHEIRO</span>
-              <span className="block text-white">Todo Santo Dia!</span>
+            <h1 className="text-5xl md:text-7xl font-black font-playfair mb-8 leading-tight">
+              <span className="block text-white">Transforme Seu</span>
+              <span className="block elegant-text text-8xl">NEGÓCIO</span>
+              <span className="block text-gray-200">Com Design Premium</span>
             </h1>
             
-            <p className="text-2xl md:text-3xl mb-8 max-w-5xl mx-auto leading-relaxed">
-              Enquanto você <span className="text-red-400 font-bold animate-urgent-glow">PERDE clientes</span> para sites horríveis,
-              <br />nossos clientes estão <span className="magnetic-text font-bold">FATURANDO MILHÕES!</span>
+            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-gray-300">
+              Desenvolvemos <span className="premium-text font-semibold">sites profissionais</span> que 
+              <br />elevam sua marca e <span className="elegant-text font-semibold">geram resultados reais!</span>
             </p>
 
-            <div className="glass-card p-6 rounded-2xl mb-12 max-w-4xl mx-auto">
-              <div className="text-4xl font-bold mb-4">
-                <span className="magnetic-text">R$ 2.347.892</span>
+            <div className="glass-premium p-6 rounded-2xl mb-12 max-w-3xl mx-auto elegant-border">
+              <div className="text-3xl font-bold mb-3">
+                <span className="premium-text">R$ 2.347.892</span>
               </div>
-              <p className="text-xl text-gray-300">Faturamento gerado para nossos clientes nos últimos 30 dias</p>
+              <p className="text-lg text-gray-400">Faturamento gerado para nossos clientes nos últimos 30 dias</p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-16">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
               <Link to="/contato">
-                <Button size="lg" className="btn-irresistible text-white px-16 py-8 text-2xl font-black hover-magnetic rounded-xl shadow-2xl">
-                  <Rocket className="mr-4 h-8 w-8" />
-                  QUERO FATURAR AGORA!
-                  <ArrowRight className="ml-4 h-8 w-8" />
+                <Button size="lg" className="btn-premium text-white px-12 py-6 text-xl font-bold hover-premium rounded-xl shadow-xl">
+                  <Rocket className="mr-3 h-6 w-6" />
+                  COMEÇAR AGORA
+                  <ArrowRight className="ml-3 h-6 w-6" />
                 </Button>
               </Link>
               <div className="text-center">
-                <div className="text-red-400 font-bold text-lg animate-urgent-glow">⚠️ ÚLTIMAS 7 VAGAS ⚠️</div>
-                <div className="text-sm text-gray-400">Promoção válida por 48 horas</div>
+                <div className="text-amber-400 font-semibold text-base animate-elegant-glow">⭐ Vagas Limitadas</div>
+                <div className="text-sm text-gray-500">Aproveite nossa oferta especial</div>
               </div>
             </div>
 
-            {/* Stats Hipnotizantes */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {/* Stats Elegantes */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center glass-card p-8 rounded-2xl hover-magnetic pulsing-border" style={{ animationDelay: `${index * 300}ms` }}>
-                  <div className={`inline-flex items-center justify-center w-16 h-16 fire-gradient-intense rounded-xl mb-6 animate-magnetic-pull`}>
-                    <stat.icon className="h-8 w-8 text-white" />
+                <div key={index} className="text-center glass-premium p-6 rounded-2xl hover-elegant elegant-border" style={{ animationDelay: `${index * 200}ms` }}>
+                  <div className={`inline-flex items-center justify-center w-12 h-12 premium-gradient rounded-xl mb-4 animate-soft-pulse`}>
+                    <stat.icon className="h-6 w-6 text-white" />
                   </div>
-                  <div className={`text-4xl md:text-5xl font-black mb-4 ${stat.color} animate-success-pulse`}>{stat.number}</div>
-                  <div className="text-lg text-gray-300 font-bold">{stat.label}</div>
+                  <div className={`text-3xl md:text-4xl font-bold mb-3 ${stat.color} animate-success-glow`}>{stat.number}</div>
+                  <div className="text-base text-gray-400 font-medium">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -168,56 +168,56 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-32 relative">
+      <section className="py-24 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <div className="urgency-indicator rounded-full px-8 py-4 mb-8 inline-block">
-              <div className="flex items-center space-x-3">
-                <AlertTriangle className="h-6 w-6 text-white animate-magnetic-pull" />
-                <span className="text-xl font-black text-white">ATENÇÃO: OPORTUNIDADE ÚNICA!</span>
-                <AlertTriangle className="h-6 w-6 text-white animate-magnetic-pull" />
+          <div className="text-center mb-16">
+            <div className="success-elegant rounded-full px-6 py-3 mb-8 inline-block animate-success-glow">
+              <div className="flex items-center space-x-2">
+                <Gem className="h-5 w-5 text-white animate-soft-pulse" />
+                <span className="text-lg font-bold text-white">SOLUÇÕES PREMIUM</span>
+                <Gem className="h-5 w-5 text-white animate-soft-pulse" />
               </div>
             </div>
             
-            <h2 className="text-5xl md:text-7xl font-black font-playfair mb-8">
+            <h2 className="text-4xl md:text-6xl font-black font-playfair mb-6">
               <span className="block text-white">Serviços que</span>
-              <span className="block magnetic-text">TRANSFORMAM</span>
-              <span className="block hypnotic-text">Pobres em Ricos!</span>
+              <span className="block premium-text">TRANSFORMAM</span>
+              <span className="block elegant-shine">Seu Negócio!</span>
             </h2>
-            <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-              Pare de <span className="text-red-400 font-bold">sonhar</span> e comece a 
-              <span className="magnetic-text font-black"> REALIZAR!</span>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+              Criamos experiências digitais que <span className="premium-text font-semibold">impressionam</span> e 
+              <span className="elegant-text font-semibold"> convertem!</span>
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="hover-irresistible border-0 shadow-2xl h-full glass-card group overflow-hidden pulsing-border" style={{ animationDelay: `${index * 200}ms` }}>
+              <Card key={index} className="hover-elegant border-0 shadow-xl h-full glass-premium group overflow-hidden elegant-border" style={{ animationDelay: `${index * 150}ms` }}>
                 <CardContent className="p-0">
-                  <div className={`${service.color} p-8 text-white relative overflow-hidden`}>
-                    <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-20 translate-x-20"></div>
-                    <div className="absolute top-4 right-4 urgency-indicator px-3 py-1 rounded-full text-xs font-black">
+                  <div className={`${service.color} p-6 text-white relative overflow-hidden`}>
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
+                    <div className="absolute top-3 right-3 urgency-soft px-3 py-1 rounded-full text-xs font-semibold">
                       {service.urgency}
                     </div>
                     <div className="relative z-10">
-                      <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl mb-8 group-hover:scale-125 transition-transform duration-500 animate-magnetic-pull">
+                      <div className="inline-flex items-center justify-center w-16 h-16 bg-white/15 backdrop-blur-sm rounded-xl mb-6 group-hover:scale-110 transition-transform duration-500 animate-soft-pulse">
                         {service.icon}
                       </div>
-                      <div className="social-proof px-6 py-3 rounded-full text-lg font-black mb-6 animate-success-pulse">
+                      <div className="success-elegant px-4 py-2 rounded-full text-sm font-bold mb-4 animate-success-glow">
                         {service.highlight}
                       </div>
                     </div>
                   </div>
                   
-                  <div className="p-8">
-                    <h3 className="text-3xl font-black mb-6 font-playfair magnetic-text">
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold mb-4 font-playfair premium-text">
                       {service.title}
                     </h3>
-                    <p className="text-gray-300 mb-10 text-lg leading-relaxed">{service.description}</p>
+                    <p className="text-gray-400 mb-8 text-base leading-relaxed">{service.description}</p>
                     <Link to="/contato">
-                      <Button className="w-full btn-irresistible text-white hover-magnetic rounded-xl py-6 text-xl font-black">
-                        QUERO ESTE PODER!
-                        <ArrowRight className="ml-3 h-6 w-6" />
+                      <Button className="w-full btn-premium text-white hover-premium rounded-xl py-4 text-lg font-semibold">
+                        SAIBA MAIS
+                        <ArrowRight className="ml-2 h-5 w-5" />
                       </Button>
                     </Link>
                   </div>
@@ -229,57 +229,57 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-32 relative">
+      <section className="py-24 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <div className="social-proof rounded-full px-8 py-4 mb-8 inline-block animate-success-pulse">
-              <div className="flex items-center space-x-3">
-                <Heart className="h-6 w-6 text-white animate-magnetic-pull" />
-                <span className="text-xl font-black text-white">CLIENTES APAIXONADOS!</span>
-                <Heart className="h-6 w-6 text-white animate-magnetic-pull" />
+          <div className="text-center mb-16">
+            <div className="success-elegant rounded-full px-6 py-3 mb-8 inline-block animate-success-glow">
+              <div className="flex items-center space-x-2">
+                <Heart className="h-5 w-5 text-white animate-soft-pulse" />
+                <span className="text-lg font-bold text-white">CLIENTES SATISFEITOS</span>
+                <Heart className="h-5 w-5 text-white animate-soft-pulse" />
               </div>
             </div>
             
-            <h2 className="text-5xl md:text-7xl font-black font-playfair mb-8">
-              <span className="block magnetic-text">Resultados</span>
-              <span className="block hypnotic-text">INSANOS!</span>
+            <h2 className="text-4xl md:text-6xl font-black font-playfair mb-6">
+              <span className="block premium-text">Resultados</span>
+              <span className="block elegant-shine">Comprovados!</span>
             </h2>
-            <p className="text-2xl text-gray-300 max-w-4xl mx-auto">
-              Veja como transformamos <span className="text-red-400 font-bold">sonhadores</span> em 
-              <span className="magnetic-text font-black"> MILIONÁRIOS!</span>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Veja como ajudamos nossos clientes a <span className="premium-text font-semibold">alcançar o sucesso</span> com 
+              <span className="elegant-text font-semibold"> design premium!</span>
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="hover-irresistible border-0 shadow-2xl glass-card group pulsing-border" style={{ animationDelay: `${index * 200}ms` }}>
-                <CardContent className="p-8">
-                  <div className="flex mb-6">
+              <Card key={index} className="hover-elegant border-0 shadow-xl glass-premium group elegant-border" style={{ animationDelay: `${index * 150}ms` }}>
+                <CardContent className="p-6">
+                  <div className="flex mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-6 w-6 text-yellow-400 fill-current animate-magnetic-pull" />
+                      <Star key={i} className="h-5 w-5 text-amber-400 fill-current animate-soft-pulse" />
                     ))}
                   </div>
                   
-                  <div className="flex justify-between items-center mb-8">
-                    <div className="social-proof text-white px-4 py-2 rounded-full text-sm font-black animate-success-pulse">
+                  <div className="flex justify-between items-center mb-6">
+                    <div className="success-elegant text-white px-3 py-1 rounded-full text-sm font-semibold animate-success-glow">
                       {testimonial.result}
                     </div>
-                    <div className="text-yellow-400 text-sm font-bold">
+                    <div className="text-amber-400 text-sm font-medium">
                       em {testimonial.timeframe}
                     </div>
                   </div>
                   
-                  <p className="text-gray-300 mb-8 text-lg leading-relaxed font-medium">
+                  <p className="text-gray-400 mb-6 text-base leading-relaxed">
                     "{testimonial.content}"
                   </p>
                   
-                  <div className="border-t border-gray-700 pt-6 flex items-center space-x-4">
-                    <div className="w-16 h-16 fire-gradient-intense rounded-full flex items-center justify-center text-3xl animate-magnetic-pull">
+                  <div className="border-t border-gray-700/50 pt-4 flex items-center space-x-3">
+                    <div className="w-12 h-12 premium-gradient rounded-full flex items-center justify-center text-2xl animate-soft-pulse">
                       {testimonial.avatar}
                     </div>
                     <div>
-                      <div className="font-black text-white text-lg">{testimonial.name}</div>
-                      <div className="magnetic-text font-bold">{testimonial.company}</div>
+                      <div className="font-semibold text-white text-base">{testimonial.name}</div>
+                      <div className="premium-text font-medium text-sm">{testimonial.company}</div>
                     </div>
                   </div>
                 </CardContent>
@@ -290,53 +290,53 @@ const Home = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-32 relative">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="glass-card p-12 rounded-3xl pulsing-border">
-            <div className="urgency-indicator rounded-full px-8 py-4 mb-12 inline-block">
-              <div className="flex items-center space-x-3">
-                <Clock className="h-6 w-6 text-white animate-magnetic-pull" />
-                <span className="text-xl font-black text-white">⏰ OFERTA EXPIRA EM 47:23:16 ⏰</span>
-                <Clock className="h-6 w-6 text-white animate-magnetic-pull" />
+      <section className="py-24 relative">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="glass-premium p-10 rounded-3xl elegant-border">
+            <div className="urgency-soft rounded-full px-6 py-3 mb-10 inline-block">
+              <div className="flex items-center space-x-2">
+                <Clock className="h-5 w-5 text-white animate-soft-pulse" />
+                <span className="text-lg font-bold text-white">⏰ OFERTA POR TEMPO LIMITADO ⏰</span>
+                <Clock className="h-5 w-5 text-white animate-soft-pulse" />
               </div>
             </div>
             
-            <h2 className="text-5xl md:text-7xl font-black font-playfair mb-8 leading-tight">
-              <span className="block text-white">Sua Última</span>
-              <span className="block magnetic-text">CHANCE</span>
-              <span className="block hypnotic-text">de Ficar RICO!</span>
+            <h2 className="text-4xl md:text-6xl font-black font-playfair mb-6 leading-tight">
+              <span className="block text-white">Pronto Para</span>
+              <span className="block premium-text">TRANSFORMAR</span>
+              <span className="block elegant-shine">Seu Negócio?</span>
             </h2>
             
-            <p className="text-2xl mb-12 text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Enquanto você <span className="text-red-400 font-bold animate-urgent-glow">hesita</span>, 
-              seus concorrentes estão <span className="magnetic-text font-black">FATURANDO!</span>
+            <p className="text-xl mb-10 text-gray-400 max-w-3xl mx-auto leading-relaxed">
+              Não deixe para amanhã o que pode <span className="premium-text font-semibold">revolucionar</span> 
+              seu negócio <span className="elegant-text font-semibold">hoje mesmo!</span>
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-10">
               <Link to="/contato">
-                <Button size="lg" className="btn-irresistible text-white px-16 py-8 text-2xl font-black hover-magnetic rounded-xl shadow-2xl">
-                  <Rocket className="mr-4 h-8 w-8" />
-                  SIM! QUERO FICAR RICO!
-                  <ArrowRight className="ml-4 h-8 w-8" />
+                <Button size="lg" className="btn-premium text-white px-12 py-6 text-xl font-bold hover-premium rounded-xl shadow-xl">
+                  <Rocket className="mr-3 h-6 w-6" />
+                  COMEÇAR AGORA
+                  <ArrowRight className="ml-3 h-6 w-6" />
                 </Button>
               </Link>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
               <div className="text-center">
-                <div className="text-4xl mb-2">⚡</div>
-                <div className="font-bold text-yellow-400">ENTREGA RÁPIDA</div>
-                <div className="text-sm text-gray-400">7-14 dias úteis</div>
+                <div className="text-3xl mb-2">⚡</div>
+                <div className="font-semibold text-amber-400">ENTREGA RÁPIDA</div>
+                <div className="text-sm text-gray-500">7-14 dias úteis</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-2">🛡️</div>
-                <div className="font-bold text-green-400">GARANTIA TOTAL</div>
-                <div className="text-sm text-gray-400">30 dias ou dinheiro de volta</div>
+                <div className="text-3xl mb-2">🛡️</div>
+                <div className="font-semibold text-emerald-400">GARANTIA TOTAL</div>
+                <div className="text-sm text-gray-500">30 dias ou dinheiro de volta</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-2">👑</div>
-                <div className="font-bold text-purple-400">SUPORTE VIP</div>
-                <div className="text-sm text-gray-400">24/7 para sempre</div>
+                <div className="text-3xl mb-2">👑</div>
+                <div className="font-semibold text-purple-400">SUPORTE PREMIUM</div>
+                <div className="text-sm text-gray-500">Atendimento especializado</div>
               </div>
             </div>
           </div>
