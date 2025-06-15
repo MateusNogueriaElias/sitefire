@@ -68,24 +68,27 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				fire: {
-					primary: 'hsl(var(--fire-primary))',
-					secondary: 'hsl(var(--fire-secondary))',
-					accent: 'hsl(var(--fire-accent))',
-					dark: 'hsl(var(--fire-dark))',
-					light: 'hsl(var(--fire-light))',
-					glow: 'hsl(var(--fire-glow))'
+					primary: '#FB6600',
+					secondary: '#FC6A01', 
+					accent: '#FC6C01',
+					dark: '#E85A00',
+					light: '#FFF4EE',
+					glow: '#FF7518'
 				},
-				coral: {
-					50: '#fef7f3',
-					100: '#fdeee6',
-					200: '#fbdacc',
-					300: '#f8bfa8',
-					400: '#f49a7e',
-					500: '#ef7650',
-					600: '#dd5a33',
-					700: '#b84729',
-					800: '#943c26',
-					900: '#783524',
+				brand: {
+					primary: '#FB6600',
+					secondary: '#FC6A01',
+					tertiary: '#FC6C01',
+					50: '#FFF7F1',
+					100: '#FFEDE1',
+					200: '#FFD6BC',
+					300: '#FFB48D',
+					400: '#FF8B5C',
+					500: '#FB6600',
+					600: '#FC6A01',
+					700: '#FC6C01',
+					800: '#CC5500',
+					900: '#994000',
 				}
 			},
 			borderRadius: {
