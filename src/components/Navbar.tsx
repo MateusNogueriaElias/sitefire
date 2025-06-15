@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Menu, X, Zap } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -11,7 +12,8 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setIsScrolled(currentScrollY > 20);
+      // Definir um valor maior para que a navbar apareça apenas após a seção laranja
+      setIsScrolled(currentScrollY > 400);
     };
     
     window.addEventListener('scroll', handleScroll);
@@ -44,10 +46,13 @@ const Navbar = () => {
     { name: 'Contato', path: '/contato' },
   ];
 
+  // Se não estiver scrolled, não mostrar a navbar
+  if (!isScrolled) {
+    return null;
+  }
+
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled ? 'glass-morphism shadow-2xl py-2' : 'bg-transparent py-4'
-    }`}>
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-morphism shadow-2xl py-2 transition-all duration-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo Enhanced */}
@@ -64,9 +69,7 @@ const Navbar = () => {
               <span className="text-2xl font-bold font-poppins fire-text-gradient group-hover:scale-105 transition-transform duration-300">
                 Fire Dominios
               </span>
-              <span className={`text-xs font-medium tracking-wide transition-colors duration-300 ${
-                isScrolled ? 'text-gray-600' : 'text-white/80'
-              }`}>
+              <span className="text-xs font-medium tracking-wide text-gray-600 transition-colors duration-300">
                 Digital Excellence
               </span>
             </div>
@@ -81,7 +84,7 @@ const Navbar = () => {
                 className={`font-semibold transition-all duration-300 relative group px-4 py-2 rounded-full ${
                   isActive(item.path)
                     ? 'text-fire-primary bg-fire-gradient-soft'
-                    : `${isScrolled ? 'text-gray-700' : 'text-gray-700'} hover:text-fire-primary hover:bg-fire-gradient-soft`
+                    : 'text-gray-700 hover:text-fire-primary hover:bg-fire-gradient-soft'
                 }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
@@ -107,9 +110,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`transition-all duration-300 p-2 rounded-full hover:bg-fire-gradient-soft ${
-                isScrolled ? 'text-gray-700 hover:text-fire-primary' : 'text-white hover:text-fire-primary'
-              }`}
+              className="transition-all duration-300 p-2 rounded-full hover:bg-fire-gradient-soft text-gray-700 hover:text-fire-primary"
             >
               {isMenuOpen ? 
                 <X size={28} className="animate-scale-in" /> : 
