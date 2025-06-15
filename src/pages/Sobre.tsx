@@ -1,27 +1,26 @@
-
-import { Users, Award, Lightbulb, Heart, Target, Zap } from 'lucide-react';
+import { Users, Award, Lightbulb, Heart, Target, Zap, Rocket, Focus, Handshake } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import ScrollReveal from '@/components/ScrollReveal';
 
 const Sobre = () => {
   const values = [
     {
-      icon: <Lightbulb className="h-8 w-8 text-fire-primary" />,
+      icon: <Rocket className="h-8 w-8 text-white" />,
       title: "Inovação",
       description: "Utilizamos as tecnologias mais modernas e tendências atuais para criar soluções de impacto"
     },
     {
-      icon: <Heart className="h-8 w-8 text-fire-primary" />,
+      icon: <Zap className="h-8 w-8 text-white" />,
       title: "Paixão",
       description: "Começamos nossa jornada com energia e determinação para revolucionar a presença digital"
     },
     {
-      icon: <Target className="h-8 w-8 text-fire-primary" />,
+      icon: <Focus className="h-8 w-8 text-white" />,
       title: "Foco",
       description: "Nossa missão é clara: entregar resultados que transformem negócios desde o primeiro projeto"
     },
     {
-      icon: <Users className="h-8 w-8 text-fire-primary" />,
+      icon: <Handshake className="h-8 w-8 text-white" />,
       title: "Parceria",
       description: "Construímos relacionamentos duradouros, sendo verdadeiros parceiros do seu crescimento"
     }
