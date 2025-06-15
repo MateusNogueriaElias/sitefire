@@ -1,6 +1,7 @@
 
 import { Users, Award, Lightbulb, Heart, Target, Zap } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const Sobre = () => {
   const values = [
@@ -78,14 +79,14 @@ const Sobre = () => {
       <section className="relative py-20 fire-gradient text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="animate-fade-in-up">
+          <ScrollReveal direction="up">
             <h1 className="text-4xl md:text-6xl font-bold font-poppins mb-6">
               Sobre a <span className="text-yellow-300">Fire Dominios</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
               Somos uma agência digital apaixonada por transformar ideias em experiências digitais extraordinárias
             </p>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -93,7 +94,7 @@ const Sobre = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in-up">
+            <ScrollReveal direction="left">
               <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-6">
                 Nossa <span className="fire-text-gradient">História</span>
               </h2>
@@ -110,9 +111,9 @@ const Sobre = () => {
                 Nosso segredo? Combinar criatividade excepcional com tecnologia de ponta e, 
                 acima de tudo, entender profundamente as necessidades de cada cliente.
               </p>
-            </div>
+            </ScrollReveal>
             
-            <div className="relative animate-scale-in">
+            <ScrollReveal direction="right">
               <div className="fire-gradient rounded-2xl p-8 text-white text-center transform -rotate-3 hover:rotate-0 transition-transform duration-500">
                 <h3 className="text-2xl font-bold mb-6">Nossa Missão</h3>
                 <p className="text-lg opacity-90 mb-6">
@@ -137,7 +138,7 @@ const Sobre = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -145,26 +146,30 @@ const Sobre = () => {
       {/* Values Section */}
       <section className="py-20 bg-gradient-to-br from-fire-light to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-4">
-              Nossos <span className="fire-text-gradient">Valores</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Os princípios que norteiam cada decisão e cada projeto que desenvolvemos
-            </p>
-          </div>
+          <ScrollReveal direction="up">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-4">
+                Nossos <span className="fire-text-gradient">Valores</span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Os princípios que norteiam cada decisão e cada projeto que desenvolvemos
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <Card key={index} className="hover-lift border-0 shadow-lg text-center animate-scale-in" style={{ animationDelay: `${index * 0.2}s` }}>
-                <CardContent className="p-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 fire-gradient rounded-full mb-4">
-                    {value.icon}
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 font-poppins">{value.title}</h3>
-                  <p className="text-gray-600">{value.description}</p>
-                </CardContent>
-              </Card>
+              <ScrollReveal key={index} direction="up" delay={index * 200}>
+                <Card className="hover-lift border-0 shadow-lg text-center">
+                  <CardContent className="p-6">
+                    <div className="inline-flex items-center justify-center w-16 h-16 fire-gradient rounded-full mb-4">
+                      {value.icon}
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 font-poppins">{value.title}</h3>
+                    <p className="text-gray-600">{value.description}</p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -173,34 +178,38 @@ const Sobre = () => {
       {/* Timeline Section */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-4">
-              Nossa <span className="fire-text-gradient">Jornada</span>
-            </h2>
-            <p className="text-xl text-gray-600">
-              Os marcos mais importantes da nossa trajetória de sucesso
-            </p>
-          </div>
+          <ScrollReveal direction="up">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-4">
+                Nossa <span className="fire-text-gradient">Jornada</span>
+              </h2>
+              <p className="text-xl text-gray-600">
+                Os marcos mais importantes da nossa trajetória de sucesso
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-fire-primary hidden md:block"></div>
             
             {milestones.map((milestone, index) => (
-              <div key={index} className={`relative flex items-center mb-12 animate-fade-in-up ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`} style={{ animationDelay: `${index * 0.2}s` }}>
-                <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8'}`}>
-                  <Card className="hover-lift border-0 shadow-lg">
-                    <CardContent className="p-6">
-                      <div className="text-2xl font-bold text-fire-primary mb-2">{milestone.year}</div>
-                      <h3 className="text-xl font-bold mb-3 font-poppins">{milestone.title}</h3>
-                      <p className="text-gray-600">{milestone.description}</p>
-                    </CardContent>
-                  </Card>
+              <ScrollReveal key={index} direction="up" delay={index * 200}>
+                <div className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                  <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8'}`}>
+                    <Card className="hover-lift border-0 shadow-lg">
+                      <CardContent className="p-6">
+                        <div className="text-2xl font-bold text-fire-primary mb-2">{milestone.year}</div>
+                        <h3 className="text-xl font-bold mb-3 font-poppins">{milestone.title}</h3>
+                        <p className="text-gray-600">{milestone.description}</p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                  
+                  <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 fire-gradient rounded-full items-center justify-center">
+                    <Zap className="h-6 w-6 text-white" />
+                  </div>
                 </div>
-                
-                <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 fire-gradient rounded-full items-center justify-center">
-                  <Zap className="h-6 w-6 text-white" />
-                </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -209,27 +218,31 @@ const Sobre = () => {
       {/* Team Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-4">
-              Nossa <span className="fire-text-gradient">Equipe</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Conheça os talentos por trás dos projetos que transformam negócios
-            </p>
-          </div>
+          <ScrollReveal direction="up">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-4">
+                Nossa <span className="fire-text-gradient">Equipe</span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Conheça os talentos por trás dos projetos que transformam negócios
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {team.map((member, index) => (
-              <Card key={index} className="hover-lift border-0 shadow-lg text-center animate-scale-in" style={{ animationDelay: `${index * 0.2}s` }}>
-                <CardContent className="p-8">
-                  <div className="w-24 h-24 fire-gradient rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <Users className="h-12 w-12 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-2 font-poppins">{member.name}</h3>
-                  <div className="text-fire-primary font-medium mb-4">{member.role}</div>
-                  <p className="text-gray-600">{member.description}</p>
-                </CardContent>
-              </Card>
+              <ScrollReveal key={index} direction="up" delay={index * 200}>
+                <Card className="hover-lift border-0 shadow-lg text-center">
+                  <CardContent className="p-8">
+                    <div className="w-24 h-24 fire-gradient rounded-full mx-auto mb-6 flex items-center justify-center">
+                      <Users className="h-12 w-12 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-2 font-poppins">{member.name}</h3>
+                    <div className="text-fire-primary font-medium mb-4">{member.role}</div>
+                    <p className="text-gray-600">{member.description}</p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -238,7 +251,7 @@ const Sobre = () => {
       {/* CTA Section */}
       <section className="py-20 fire-gradient-reverse text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="animate-fade-in-up">
+          <ScrollReveal direction="up">
             <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-6">
               Pronto para Fazer Parte da Nossa História de Sucesso?
             </h2>
@@ -253,7 +266,7 @@ const Sobre = () => {
                 Ver Nossos Serviços
               </a>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
     </div>

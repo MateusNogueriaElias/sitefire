@@ -13,7 +13,7 @@ export const useScrollReveal = (options: UseScrollRevealOptions = {}) => {
 
   const {
     threshold = 0.1,
-    rootMargin = '0px 0px -50px 0px',
+    rootMargin = '0px 0px -100px 0px',
     triggerOnce = false
   } = options;
 
@@ -26,8 +26,7 @@ export const useScrollReveal = (options: UseScrollRevealOptions = {}) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
-          } else {
-            // Sempre esconde quando sai da view, mesmo se triggerOnce for true
+          } else if (!triggerOnce) {
             setIsVisible(false);
           }
         });

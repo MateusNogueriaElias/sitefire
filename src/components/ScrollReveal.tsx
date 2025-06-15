@@ -21,7 +21,8 @@ const ScrollReveal = ({
 }: ScrollRevealProps) => {
   const { elementRef, isVisible } = useScrollReveal({ 
     threshold, 
-    triggerOnce 
+    triggerOnce,
+    rootMargin: '0px 0px -50px 0px'
   });
 
   const getTransformClass = () => {
@@ -29,17 +30,17 @@ const ScrollReveal = ({
     
     switch (direction) {
       case 'up':
-        return 'translate-y-8 opacity-0';
+        return 'translate-y-12 opacity-0';
       case 'down':
-        return '-translate-y-8 opacity-0';
+        return '-translate-y-12 opacity-0';
       case 'left':
-        return 'translate-x-8 opacity-0';
+        return 'translate-x-12 opacity-0';
       case 'right':
-        return '-translate-x-8 opacity-0';
+        return '-translate-x-12 opacity-0';
       case 'fade':
         return 'opacity-0';
       default:
-        return 'translate-y-8 opacity-0';
+        return 'translate-y-12 opacity-0';
     }
   };
 
