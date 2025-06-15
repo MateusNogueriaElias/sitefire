@@ -27,13 +27,13 @@
     --ring: 222.2 84% 4.9%;
     --radius: 0.5rem;
     
-    /* Fire Dominios Brand Colors - Paleta Mais Suave */
-    --fire-primary: 210 100% 40%;        /* Azul profundo principal */
-    --fire-secondary: 200 85% 45%;       /* Azul vibrante secundário */
-    --fire-accent: 195 80% 50%;          /* Azul claro accent */
-    --fire-dark: 220 90% 35%;            /* Azul escuro intenso */
-    --fire-light: 210 60% 98%;           /* Azul muito claro para backgrounds */
-    --fire-glow: 205 85% 48%;            /* Azul brilhante para efeitos */
+    /* Fire Dominios Brand Colors - Paleta Laranja */
+    --fire-primary: 25 95% 53%;          /* Laranja vibrante principal */
+    --fire-secondary: 35 91% 62%;        /* Laranja dourado secundário */
+    --fire-accent: 45 100% 70%;          /* Amarelo laranja accent */
+    --fire-dark: 15 85% 45%;             /* Laranja escuro intenso */
+    --fire-light: 30 100% 97%;           /* Laranja muito claro para backgrounds */
+    --fire-glow: 20 100% 55%;            /* Laranja brilhante para efeitos */
   }
 
   .dark {
@@ -65,7 +65,7 @@
   }
   body {
     @apply bg-background text-foreground font-inter;
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 25%, #e2e8f0 50%, #f8fafc 75%, #f1f5f9 100%);
+    background: linear-gradient(135deg, #fefbf8 0%, #fdf7f0 25%, #fbeee0 50%, #fefbf8 75%, #fdf7f0 100%);
     background-attachment: fixed;
   }
 }
@@ -78,14 +78,14 @@
     font-family: 'Poppins', sans-serif;
   }
   
-  /* Gradientes Fire Refinados - Tons Azuis */
+  /* Gradientes Fire Refinados - Tons Laranja */
   .fire-gradient {
     background: linear-gradient(135deg, 
       hsl(var(--fire-primary)) 0%, 
       hsl(var(--fire-secondary)) 40%, 
       hsl(var(--fire-accent)) 80%, 
-      hsl(190 75% 55%) 100%);
-    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+      hsl(45 90% 75%) 100%);
+    box-shadow: 0 10px 30px rgba(251, 146, 60, 0.25);
   }
   
   .fire-gradient-reverse {
@@ -93,22 +93,22 @@
       hsl(var(--fire-accent)) 0%, 
       hsl(var(--fire-secondary)) 40%, 
       hsl(var(--fire-primary)) 80%, 
-      hsl(220 90% 40%) 100%);
-    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+      hsl(15 85% 50%) 100%);
+    box-shadow: 0 10px 30px rgba(251, 146, 60, 0.25);
   }
   
   .fire-gradient-soft {
     background: linear-gradient(135deg, 
-      rgba(59, 130, 246, 0.08) 0%, 
-      rgba(96, 165, 250, 0.06) 50%, 
-      rgba(147, 197, 253, 0.04) 100%);
+      rgba(251, 146, 60, 0.08) 0%, 
+      rgba(251, 191, 36, 0.06) 50%, 
+      rgba(253, 224, 71, 0.04) 100%);
   }
   
   .fire-text-gradient {
     background: linear-gradient(135deg, 
-      hsl(210 100% 40%) 0%, 
-      hsl(200 85% 45%) 50%, 
-      hsl(195 80% 50%) 100%);
+      hsl(25 95% 53%) 0%, 
+      hsl(35 91% 62%) 50%, 
+      hsl(45 100% 70%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -116,12 +116,12 @@
   
   .fire-text-glow {
     background: linear-gradient(135deg, 
-      hsl(210 85% 45%) 0%, 
-      hsl(200 80% 50%) 100%);
+      hsl(25 95% 53%) 0%, 
+      hsl(35 91% 62%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+    text-shadow: 0 0 20px rgba(251, 146, 60, 0.3);
   }
   
   /* Animações Suavizadas */
@@ -164,11 +164,11 @@
 
 @keyframes pulseGlow {
   0%, 100% { 
-    box-shadow: 0 0 15px rgba(59, 130, 246, 0.25), 0 0 30px rgba(59, 130, 246, 0.12);
+    box-shadow: 0 0 15px rgba(251, 146, 60, 0.3), 0 0 30px rgba(251, 146, 60, 0.15);
     transform: scale(1);
   }
   50% { 
-    box-shadow: 0 0 25px rgba(59, 130, 246, 0.35), 0 0 45px rgba(59, 130, 246, 0.18);
+    box-shadow: 0 0 25px rgba(251, 146, 60, 0.4), 0 0 45px rgba(251, 146, 60, 0.2);
     transform: scale(1.02);
   }
 }
@@ -220,15 +220,15 @@
 .glass-morphism {
   backdrop-filter: blur(16px) saturate(150%);
   background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(251, 146, 60, 0.15);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .glass-card {
   backdrop-filter: blur(12px) saturate(150%);
   background: rgba(255, 255, 255, 0.96);
-  border: 1px solid rgba(59, 130, 246, 0.1);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08), 0 6px 15px rgba(59, 130, 246, 0.05);
+  border: 1px solid rgba(251, 146, 60, 0.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08), 0 6px 15px rgba(251, 146, 60, 0.08);
 }
 
 /* Efeitos Hover Suavizados */
@@ -238,7 +238,7 @@
 
 .hover-lift:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 8px 20px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 8px 20px rgba(251, 146, 60, 0.15);
 }
 
 .hover-glow {
@@ -246,7 +246,7 @@
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 25px rgba(59, 130, 246, 0.3), 0 0 50px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 0 25px rgba(251, 146, 60, 0.4), 0 0 50px rgba(251, 146, 60, 0.2);
   transform: scale(1.03);
 }
 
@@ -264,9 +264,9 @@
   right: 0;
   bottom: 0;
   background-image: 
-    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(96, 165, 250, 0.06) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(147, 197, 253, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 20% 80%, rgba(251, 146, 60, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(251, 191, 36, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(253, 224, 71, 0.05) 0%, transparent 50%);
   animation: particleFloat 25s ease-in-out infinite;
 }
 
