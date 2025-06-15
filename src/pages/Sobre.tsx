@@ -8,22 +8,22 @@ const Sobre = () => {
     {
       icon: <Lightbulb className="h-8 w-8 text-fire-primary" />,
       title: "Inovação",
-      description: "Sempre buscamos as tecnologias e tendências mais avançadas para criar soluções únicas"
+      description: "Utilizamos as tecnologias mais modernas e tendências atuais para criar soluções de impacto"
     },
     {
       icon: <Heart className="h-8 w-8 text-fire-primary" />,
       title: "Paixão",
-      description: "Amamos o que fazemos e isso se reflete na qualidade e dedicação em cada projeto"
+      description: "Começamos nossa jornada com energia e determinação para revolucionar a presença digital"
     },
     {
       icon: <Target className="h-8 w-8 text-fire-primary" />,
-      title: "Resultados",
-      description: "Focamos em entregar resultados concretos que impactem positivamente seu negócio"
+      title: "Foco",
+      description: "Nossa missão é clara: entregar resultados que transformem negócios desde o primeiro projeto"
     },
     {
       icon: <Users className="h-8 w-8 text-fire-primary" />,
       title: "Parceria",
-      description: "Não somos apenas fornecedores, somos parceiros estratégicos do seu sucesso"
+      description: "Construímos relacionamentos duradouros, sendo verdadeiros parceiros do seu crescimento"
     }
   ];
 
@@ -31,45 +31,45 @@ const Sobre = () => {
     {
       name: "Gabriel Fire",
       role: "CEO & Founder",
-      description: "Especialista em estratégia digital com mais de 8 anos de experiência em transformação digital"
+      description: "Visionário apaixonado por transformação digital, dedicado a criar soluções que fazem a diferença"
     },
     {
       name: "Marina Code",
       role: "Head de Desenvolvimento",
-      description: "Desenvolvedora full-stack apaixonada por criar soluções elegantes e eficientes"
+      description: "Especialista em desenvolvimento web com foco em performance e experiência do usuário"
     },
     {
       name: "Lucas Design",
       role: "Creative Director",
-      description: "Designer visionário especializado em UX/UI e branding para empresas inovadoras"
+      description: "Designer criativo especializado em criar identidades visuais marcantes e funcionais"
     }
   ];
 
   const milestones = [
     {
-      year: "2020",
-      title: "Fundação",
-      description: "Nasceu o sonho de revolucionar a presença digital das empresas"
+      year: "Janeiro 2025",
+      title: "O Início",
+      description: "Nascimento da Fire Dominios com a missão de revolucionar a presença digital das empresas"
     },
     {
-      year: "2021",
-      title: "Primeiros Sucessos",
-      description: "Mais de 50 projetos entregues com resultados excepcionais"
+      year: "Q1 2025",
+      title: "Primeiros Clientes",
+      description: "Conquista dos primeiros clientes e validação do nosso modelo de negócio inovador"
     },
     {
-      year: "2022",
-      title: "Expansão",
-      description: "Crescimento da equipe e diversificação dos serviços"
+      year: "Q2 2025",
+      title: "Expansão dos Serviços",
+      description: "Ampliação do portfólio com novas soluções digitais e parcerias estratégicas"
     },
     {
-      year: "2023",
-      title: "Reconhecimento",
-      description: "Premiação como uma das melhores agências digitais do ano"
+      year: "Q3 2025",
+      title: "Crescimento Acelerado",
+      description: "Crescimento exponencial da base de clientes e reconhecimento no mercado"
     },
     {
-      year: "2024",
-      title: "Inovação",
-      description: "Lançamento de novas tecnologias e metodologias exclusivas"
+      year: "Q4 2025",
+      title: "Consolidação",
+      description: "Estabelecimento como referência em soluções digitais e preparação para 2026"
     }
   ];
 
@@ -84,7 +84,7 @@ const Sobre = () => {
               Sobre a <span className="text-yellow-300">Fire Dominios</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
-              Somos uma agência digital apaixonada por transformar ideias em experiências digitais extraordinárias
+              Uma nova era na criação de experiências digitais extraordinárias começa agora em 2025
             </p>
           </ScrollReveal>
         </div>
@@ -99,17 +99,19 @@ const Sobre = () => {
                 Nossa <span className="fire-text-gradient">História</span>
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                A Fire Dominios nasceu da visão de que toda empresa merece uma presença digital 
-                que não apenas existe, mas que verdadeiramente impacta e transforma negócios.
+                A Fire Dominios nasce em 2025 com uma visão revolucionária: toda empresa 
+                merece uma presença digital que não apenas impressiona, mas que transforma 
+                visitantes em clientes fiéis e impulsiona resultados reais.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                Fundada em 2020, começamos como um pequeno time de apaixonados por tecnologia 
-                e design. Hoje, somos reconhecidos como uma das agências digitais mais inovadoras, 
-                com um portfólio de mais de 200 projetos bem-sucedidos.
+                Começamos nossa jornada como uma agência digital jovem e ambiciosa, com 
+                uma equipe apaixonada por tecnologia e design. Nossa abordagem inovadora 
+                combina as mais modernas tecnologias web com estratégias comprovadas de conversão.
               </p>
               <p className="text-lg text-gray-600">
-                Nosso segredo? Combinar criatividade excepcional com tecnologia de ponta e, 
-                acima de tudo, entender profundamente as necessidades de cada cliente.
+                Nosso diferencial está na dedicação total ao sucesso de cada cliente. 
+                Cada projeto é tratado como uma oportunidade única de criar algo extraordinário 
+                que gere impacto real no mercado.
               </p>
             </ScrollReveal>
             
@@ -117,24 +119,24 @@ const Sobre = () => {
               <div className="fire-gradient rounded-2xl p-8 text-white text-center transform -rotate-3 hover:rotate-0 transition-transform duration-500">
                 <h3 className="text-2xl font-bold mb-6">Nossa Missão</h3>
                 <p className="text-lg opacity-90 mb-6">
-                  Empoderar empresas através de soluções digitais que convertem visitantes em clientes fiéis
+                  Transformar ideias em experiências digitais que convertem, impressionam e geram resultados extraordinários
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <div className="text-3xl font-bold mb-2">200+</div>
-                    <div className="text-sm opacity-90">Projetos Entregues</div>
+                    <div className="text-3xl font-bold mb-2">2025</div>
+                    <div className="text-sm opacity-90">Ano de Fundação</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold mb-2">4 Anos</div>
-                    <div className="text-sm opacity-90">de Experiência</div>
+                    <div className="text-3xl font-bold mb-2">100%</div>
+                    <div className="text-sm opacity-90">Dedicação</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold mb-2">98%</div>
-                    <div className="text-sm opacity-90">Satisfação</div>
+                    <div className="text-3xl font-bold mb-2">∞</div>
+                    <div className="text-sm opacity-90">Potencial</div>
                   </div>
                   <div>
                     <div className="text-3xl font-bold mb-2">24/7</div>
-                    <div className="text-sm opacity-90">Suporte</div>
+                    <div className="text-sm opacity-90">Comprometimento</div>
                   </div>
                 </div>
               </div>
@@ -152,7 +154,7 @@ const Sobre = () => {
                 Nossos <span className="fire-text-gradient">Valores</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Os princípios que norteiam cada decisão e cada projeto que desenvolvemos
+                Os pilares que nos guiam desde o primeiro dia de nossa jornada
               </p>
             </div>
           </ScrollReveal>
@@ -181,10 +183,10 @@ const Sobre = () => {
           <ScrollReveal direction="up">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-4">
-                Nossa <span className="fire-text-gradient">Jornada</span>
+                Nossa <span className="fire-text-gradient">Roadmap 2025</span>
               </h2>
               <p className="text-xl text-gray-600">
-                Os marcos mais importantes da nossa trajetória de sucesso
+                O plano estratégico para nosso primeiro ano de operação
               </p>
             </div>
           </ScrollReveal>
@@ -224,7 +226,7 @@ const Sobre = () => {
                 Nossa <span className="fire-text-gradient">Equipe</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Conheça os talentos por trás dos projetos que transformam negócios
+                Os visionários que estão construindo o futuro da presença digital
               </p>
             </div>
           </ScrollReveal>
@@ -253,10 +255,10 @@ const Sobre = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal direction="up">
             <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-6">
-              Pronto para Fazer Parte da Nossa História de Sucesso?
+              Seja Parte da Nossa História Desde o Início
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Vamos juntos criar o próximo capítulo de transformação digital do seu negócio
+              Junte-se a nós nesta jornada revolucionária e seja um dos primeiros a experimentar nossa abordagem inovadora
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="/contato" className="fire-gradient bg-white text-fire-primary hover:bg-gray-100 px-8 py-4 rounded-full text-lg font-semibold hover-lift transition-all duration-300">
