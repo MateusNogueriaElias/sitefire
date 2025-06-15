@@ -1,12 +1,13 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X, Zap } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +18,14 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleNavClick = (path: string) => {
+    navigate(path);
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+    setIsMenuOpen(false);
+  };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -63,9 +72,9 @@ const Navbar = () => {
           {/* Desktop Navigation Enhanced */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item, index) => (
-              <Link
+              <button
                 key={item.name}
-                to={item.path}
+                onClick={() => handleNavClick(item.path)}
                 className={`font-semibold transition-all duration-300 relative group px-4 py-2 rounded-full ${
                   isActive(item.path)
                     ? 'text-fire-primary bg-fire-gradient-soft'
@@ -77,17 +86,18 @@ const Navbar = () => {
                 <span className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 h-0.5 bg-gradient-to-r from-fire-primary to-fire-accent transition-all duration-300 ${
                   isActive(item.path) ? 'w-8' : 'w-0 group-hover:w-8'
                 }`}></span>
-              </Link>
-            ))}
-            <Link to="/contato">
-              <button className="fire-gradient text-white px-8 py-3 rounded-full font-semibold hover-lift hover-glow transition-all duration-300 shadow-lg relative overflow-hidden group">
-                <span className="relative z-10 flex items-center space-x-2">
-                  <Zap size={18} className="group-hover:animate-bounce-subtle" />
-                  <span>Começar Projeto</span>
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-fire-accent to-fire-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
-            </Link>
+            ))}
+            <button 
+              onClick={() => handleNavClick('/contato')}
+              className="fire-gradient text-white px-8 py-3 rounded-full font-semibold hover-lift hover-glow transition-all duration-300 shadow-lg relative overflow-hidden group"
+            >
+              <span className="relative z-10 flex items-center space-x-2">
+                <Zap size={18} className="group-hover:animate-bounce-subtle" />
+                <span>Começar Projeto</span>
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-fire-accent to-fire-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </button>
           </div>
 
           {/* Mobile menu button Enhanced */}
@@ -109,10 +119,9 @@ const Navbar = () => {
           <div className="md:hidden animate-fade-in-up">
             <div className="glass-card rounded-2xl mt-4 p-6 border border-white/30">
               {navItems.map((item, index) => (
-                <Link
+                <button
                   key={item.name}
-                  to={item.path}
-                  onClick={closeMenu}
+                  onClick={() => handleNavClick(item.path)}
                   className={`block w-full text-left px-4 py-3 text-lg font-medium transition-all duration-300 rounded-xl mb-2 ${
                     isActive(item.path)
                       ? 'text-fire-primary bg-fire-gradient-soft'
@@ -121,14 +130,15 @@ const Navbar = () => {
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {item.name}
-                </Link>
-              ))}
-              <Link to="/contato" onClick={closeMenu}>
-                <button className="w-full fire-gradient text-white px-6 py-4 rounded-xl text-lg font-semibold mt-4 hover-glow transition-all duration-300 flex items-center justify-center space-x-2">
-                  <Zap size={20} />
-                  <span>Começar Projeto</span>
                 </button>
-              </Link>
+              ))}
+              <button 
+                onClick={() => handleNavClick('/contato')}
+                className="w-full fire-gradient text-white px-6 py-4 rounded-xl text-lg font-semibold mt-4 hover-glow transition-all duration-300 flex items-center justify-center space-x-2"
+              >
+                <Zap size={20} />
+                <span>Começar Projeto</span>
+              </button>
             </div>
           </div>
         )}
