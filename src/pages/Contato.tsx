@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -32,13 +31,28 @@ const Contato = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simular envio do formulário
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      // Criar o corpo do email
+      const emailBody = `
+        Nome: ${formData.name}
+        Email: ${formData.email}
+        Telefone: ${formData.phone}
+        Empresa: ${formData.company}
+        Serviço: ${formData.service}
+        Mensagem: ${formData.message}
+      `;
+
+      // Criar o link mailto
+      const mailtoLink = `mailto:suporte@firedominios.com?subject=Novo contato do site - ${formData.name}&body=${encodeURIComponent(emailBody)}`;
+      
+      // Abrir o cliente de email
+      window.location.href = mailtoLink;
+      
       toast({
-        title: "Mensagem enviada com sucesso!",
-        description: "Entraremos em contato em até 24 horas.",
+        title: "Redirecionando para seu cliente de email!",
+        description: "Complete o envio no seu aplicativo de email.",
       });
+      
       setFormData({
         name: '',
         email: '',
@@ -47,20 +61,28 @@ const Contato = () => {
         service: '',
         message: ''
       });
-    }, 2000);
+    } catch (error) {
+      toast({
+        title: "Erro ao processar solicitação",
+        description: "Tente novamente ou entre em contato diretamente.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
     {
       icon: <Mail className="h-6 w-6 text-fire-primary" />,
       title: "E-mail",
-      content: "contato@firedominios.com",
+      content: "suporte@firedominios.com",
       description: "Resposta em até 2 horas"
     },
     {
       icon: <Phone className="h-6 w-6 text-fire-primary" />,
-      title: "Telefone",
-      content: "(11) 99999-9999",
+      title: "WhatsApp",
+      content: "(11) 97249-2813",
       description: "Seg à Sex, 9h às 18h"
     },
     {
@@ -324,10 +346,18 @@ const Contato = () => {
               Cada dia sem uma presença digital profissional é uma oportunidade perdida. Vamos mudar isso agora!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="tel:+5511999999999" className="bg-white text-fire-primary hover:bg-gray-100 px-8 py-4 rounded-full text-lg font-semibold hover-lift transition-all duration-300">
-                Ligar Agora
+              <a 
+                href="https://wa.me/5511972492813" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-white text-fire-primary hover:bg-gray-100 px-8 py-4 rounded-full text-lg font-semibold hover-lift transition-all duration-300"
+              >
+                Chamar no WhatsApp
               </a>
-              <a href="mailto:contato@firedominios.com" className="border-2 border-white text-white hover:bg-white hover:text-fire-primary px-8 py-4 rounded-full text-lg font-semibold hover-lift transition-all duration-300">
+              <a 
+                href="mailto:suporte@firedominios.com" 
+                className="border-2 border-white text-white hover:bg-white hover:text-fire-primary px-8 py-4 rounded-full text-lg font-semibold hover-lift transition-all duration-300"
+              >
                 Enviar E-mail
               </a>
             </div>

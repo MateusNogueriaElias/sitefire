@@ -24,10 +24,20 @@ const Footer = () => {
               Seu sucesso online começa aqui.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-fire-primary transition-colors duration-300">
+              <a 
+                href="https://www.facebook.com/share/15fPtyAn1b/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-fire-primary transition-colors duration-300"
+              >
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-fire-primary transition-colors duration-300">
+              <a 
+                href="https://www.instagram.com/firedominios/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-fire-primary transition-colors duration-300"
+              >
                 <Instagram size={20} />
               </a>
               <a href="#" className="text-gray-400 hover:text-fire-primary transition-colors duration-300">
@@ -81,11 +91,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-fire-primary" />
-                <span className="text-gray-400">contato@firedominios.com</span>
+                <span className="text-gray-400">suporte@firedominios.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone size={16} className="text-fire-primary" />
-                <span className="text-gray-400">(11) 9999-9999</span>
+                <span className="text-gray-400">(11) 97249-2813</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin size={16} className="text-fire-primary" />
