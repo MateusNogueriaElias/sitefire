@@ -1,3 +1,4 @@
+
 import { ArrowRight, Zap, Target, Rocket, CheckCircle, Star, Sparkles, TrendingUp, Users, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -30,30 +31,6 @@ const Home = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Carlos Mendes",
-      company: "TechStart Solutions",
-      content: "Impressionante! O site da Fire Dominios triplicou nossas vendas online. Design excepcional e resultados reais.",
-      rating: 5,
-      avatar: "👨‍💼"
-    },
-    {
-      name: "Marina Silva",
-      company: "Boutique Elegance",
-      content: "Profissionalismo de outro nível. Nosso e-commerce está vendendo como nunca! Superou todas as expectativas.",
-      rating: 5,
-      avatar: "👩‍💼"
-    },
-    {
-      name: "Pedro Oliveira",
-      company: "Consultoria Premium",
-      content: "A landing page desenvolvida trouxe 5x mais leads qualificados. Investimento que se paga sozinho!",
-      rating: 5,
-      avatar: "👨‍🎓"
-    }
-  ];
-
   const benefits = [
     "Design moderno e irresistível",
     "Otimização para máximas conversões", 
@@ -67,7 +44,7 @@ const Home = () => {
     <div className="overflow-hidden">
       <WhatsAppFloat />
       
-      {/* Hero Section - Sem os cards de estatísticas */}
+      {/* Hero Section */}
       <ScrollReveal direction="fade">
         <section className="relative min-h-screen flex items-center justify-center particle-bg">
           <div className="absolute inset-0 fire-gradient opacity-95"></div>
@@ -136,12 +113,8 @@ const Home = () => {
                 </div>
                 
                 <h2 className="text-4xl md:text-6xl font-bold font-poppins mb-6">
-                  Soluções que <span className="fire-text-gradient">Transformam</span> Negócios
+                  Mostre ao mundo o seu melhor — <span className="fire-text-gradient">crie seu site com a FireDomínios!</span>
                 </h2>
-                <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                  Cada projeto é uma obra-prima digital criada para fazer sua empresa 
-                  <span className="font-bold text-fire-primary"> dominar o mercado online</span>
-                </p>
               </div>
             </ScrollReveal>
 
@@ -246,59 +219,6 @@ const Home = () => {
                   </div>
                 </div>
               </ScrollReveal>
-            </div>
-          </div>
-        </section>
-      </ScrollReveal>
-
-      {/* Testimonials Section - Enhanced */}  
-      <ScrollReveal direction="up" delay={200}>
-        <section className="py-32 bg-gradient-to-br from-white to-orange-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <ScrollReveal direction="up" delay={300}>
-              <div className="text-center mb-20 animate-fade-in-up">
-                <div className="inline-flex items-center bg-fire-gradient-soft border border-fire-primary/20 rounded-full px-6 py-2 mb-6">
-                  <Star className="h-4 w-4 mr-2 text-fire-primary" />
-                  <span className="text-sm font-semibold text-fire-primary">Depoimentos Reais</span>
-                </div>
-                
-                <h2 className="text-4xl md:text-6xl font-bold font-poppins mb-6">
-                  Clientes que <span className="fire-text-gradient">Explodiram</span> as Vendas
-                </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  Histórias reais de empresas que transformaram seus resultados com a Fire Dominios
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-              {testimonials.map((testimonial, index) => (
-                <ScrollReveal key={index} direction="up" delay={index * 200 + 400}>
-                  <Card className="hover-lift border-0 shadow-2xl animate-scale-in glass-card group">
-                    <CardContent className="p-8">
-                      <div className="flex mb-6">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="h-6 w-6 text-orange-400 fill-current" />
-                        ))}
-                      </div>
-                      
-                      <p className="text-gray-700 mb-8 text-lg italic leading-relaxed">
-                        "{testimonial.content}"
-                      </p>
-                      
-                      <div className="border-t pt-6 flex items-center space-x-4">
-                        <div className="w-12 h-12 bg-fire-gradient rounded-full flex items-center justify-center text-2xl">
-                          {testimonial.avatar}
-                        </div>
-                        <div>
-                          <div className="font-bold text-lg">{testimonial.name}</div>
-                          <div className="text-fire-primary font-medium">{testimonial.company}</div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </ScrollReveal>
-              ))}
             </div>
           </div>
         </section>
