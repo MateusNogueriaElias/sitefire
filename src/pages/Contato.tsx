@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -244,9 +245,9 @@ const Contato = () => {
                           value={formData.message}
                           onChange={handleInputChange}
                           required
-                          rows={5}
+                          rows={8}
                           placeholder="Descreva seu projeto, objetivos e quaisquer requisitos específicos..."
-                          className="border-gray-300 focus:border-fire-primary focus:ring-fire-primary"
+                          className="border-gray-300 focus:border-fire-primary focus:ring-fire-primary resize-none min-h-[200px] max-h-[200px]"
                         />
                       </div>
 
