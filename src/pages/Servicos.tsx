@@ -1,4 +1,4 @@
-import { Zap, Target, Rocket, Palette, Search, ShoppingCart, ArrowRight, CheckCircle } from 'lucide-react';
+import { Zap, Bullseye, Rocket, Palette, Search, ShoppingCart, ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -7,7 +7,7 @@ import ScrollReveal from '@/components/ScrollReveal';
 const Servicos = () => {
   const services = [
     {
-      icon: <Zap className="h-12 w-12 text-fire-primary" />,
+      icon: <Zap className="h-12 w-12 text-white" />,
       title: "Landing Pages de Alto Impacto",
       description: "Páginas focadas em conversão que transformam visitantes em leads qualificados",
       features: [
@@ -20,7 +20,7 @@ const Servicos = () => {
       highlight: "Aumento médio de 300% nas conversões"
     },
     {
-      icon: <Target className="h-12 w-12 text-fire-primary" />,
+      icon: <Bullseye className="h-12 w-12 text-white" />,
       title: "Sites WordPress Profissionais",
       description: "Sites completos e profissionais com painel administrativo intuitivo",
       features: [
@@ -33,7 +33,7 @@ const Servicos = () => {
       highlight: "Sites prontos em até 7 dias"
     },
     {
-      icon: <ShoppingCart className="h-12 w-12 text-fire-primary" />,
+      icon: <ShoppingCart className="h-12 w-12 text-white" />,
       title: "E-commerce Completo",
       description: "Lojas virtuais que vendem 24/7 com integração total de pagamentos",
       features: [
@@ -46,7 +46,7 @@ const Servicos = () => {
       highlight: "Integração com principais meios de pagamento"
     },
     {
-      icon: <Rocket className="h-12 w-12 text-fire-primary" />,
+      icon: <Rocket className="h-12 w-12 text-white" />,
       title: "Desenvolvimento Personalizado",
       description: "Soluções sob medida para necessidades específicas do seu negócio",
       features: [
@@ -59,7 +59,7 @@ const Servicos = () => {
       highlight: "100% personalizado para seu negócio"
     },
     {
-      icon: <Search className="h-12 w-12 text-fire-primary" />,
+      icon: <Search className="h-12 w-12 text-white" />,
       title: "Otimização SEO",
       description: "Posicione seu site no topo do Google e aumente sua visibilidade",
       features: [
@@ -72,7 +72,7 @@ const Servicos = () => {
       highlight: "Primeiras posições no Google"
     },
     {
-      icon: <Palette className="h-12 w-12 text-fire-primary" />,
+      icon: <Palette className="h-12 w-12 text-white" />,
       title: "Design de Interface (UI/UX)",
       description: "Interfaces intuitivas e atrativas que encantam seus usuários",
       features: [
