@@ -73,6 +73,19 @@ export default {
 					accent: 'hsl(var(--fire-accent))',
 					dark: 'hsl(var(--fire-dark))',
 					light: 'hsl(var(--fire-light))',
+					glow: 'hsl(var(--fire-glow))'
+				},
+				coral: {
+					50: '#fef7f3',
+					100: '#fdeee6',
+					200: '#fbdacc',
+					300: '#f8bfa8',
+					400: '#f49a7e',
+					500: '#ef7650',
+					600: '#dd5a33',
+					700: '#b84729',
+					800: '#943c26',
+					900: '#783524',
 				}
 			},
 			borderRadius: {
