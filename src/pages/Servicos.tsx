@@ -1,4 +1,4 @@
-import { Zap, Bullseye, Rocket, Palette, Search, ShoppingCart, ArrowRight, CheckCircle } from 'lucide-react';
+import { Zap, Target, Rocket, Palette, Search, ShoppingCart, ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -20,7 +20,7 @@ const Servicos = () => {
       highlight: "Aumento médio de 300% nas conversões"
     },
     {
-      icon: <Bullseye className="h-12 w-12 text-white" />,
+      icon: <Target className="h-12 w-12 text-white" />,
       title: "Sites WordPress Profissionais",
       description: "Sites completos e profissionais com painel administrativo intuitivo",
       features: [
