@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -68,27 +67,27 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				fire: {
-					primary: '#FB6600',
-					secondary: '#FC6A01', 
-					accent: '#FC6C01',
-					dark: '#E85A00',
-					light: '#FFF4EE',
-					glow: '#FF7518'
+					primary: '#f54e01',
+					secondary: '#e53b01', 
+					accent: '#feb800',
+					dark: '#d43c00',
+					light: '#fff5f0',
+					glow: '#ff6b1a'
 				},
 				brand: {
-					primary: '#FB6600',
-					secondary: '#FC6A01',
-					tertiary: '#FC6C01',
-					50: '#FFF7F1',
-					100: '#FFEDE1',
-					200: '#FFD6BC',
-					300: '#FFB48D',
-					400: '#FF8B5C',
-					500: '#FB6600',
-					600: '#FC6A01',
-					700: '#FC6C01',
-					800: '#CC5500',
-					900: '#994000',
+					primary: '#f54e01',
+					secondary: '#e53b01',
+					tertiary: '#feb800',
+					50: '#fff7f1',
+					100: '#ffede1',
+					200: '#ffd6bc',
+					300: '#ffb48d',
+					400: '#ff8b5c',
+					500: '#f54e01',
+					600: '#e53b01',
+					700: '#d43c00',
+					800: '#cc3300',
+					900: '#990000',
 				}
 			},
 			borderRadius: {

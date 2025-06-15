@@ -70,40 +70,40 @@
     font-family: 'Poppins', sans-serif;
   }
   
-  /* Gradientes Fire com cores da marca */
+  /* Gradientes Fire com novas cores */
   .fire-gradient {
-    background: linear-gradient(135deg, #FB6600 0%, #FC6A01 50%, #FC6C01 100%);
-    box-shadow: 0 15px 35px rgba(251, 102, 0, 0.25);
+    background: linear-gradient(135deg, #f54e01 0%, #e53b01 50%, #feb800 100%);
+    box-shadow: 0 15px 35px rgba(245, 78, 1, 0.25);
   }
   
   .fire-gradient-reverse {
-    background: linear-gradient(135deg, #FC6C01 0%, #FC6A01 50%, #FB6600 100%);
-    box-shadow: 0 15px 35px rgba(251, 102, 0, 0.25);
+    background: linear-gradient(135deg, #feb800 0%, #e53b01 50%, #f54e01 100%);
+    box-shadow: 0 15px 35px rgba(245, 78, 1, 0.25);
   }
   
   .fire-gradient-soft {
     background: linear-gradient(135deg, 
-      rgba(251, 102, 0, 0.08) 0%, 
-      rgba(252, 106, 1, 0.06) 50%, 
-      rgba(252, 108, 1, 0.04) 100%);
+      rgba(245, 78, 1, 0.08) 0%, 
+      rgba(229, 59, 1, 0.06) 50%, 
+      rgba(254, 184, 0, 0.04) 100%);
   }
   
   .fire-text-gradient {
-    background: linear-gradient(135deg, #FB6600 0%, #FC6A01 50%, #FC6C01 100%);
+    background: linear-gradient(135deg, #f54e01 0%, #e53b01 50%, #feb800 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
   .fire-text-glow {
-    background: linear-gradient(135deg, #FB6600 0%, #FC6A01 100%);
+    background: linear-gradient(135deg, #f54e01 0%, #feb800 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-shadow: 0 0 20px rgba(251, 102, 0, 0.3);
+    text-shadow: 0 0 20px rgba(245, 78, 1, 0.3);
   }
   
-  /* Animações Suavizadas */
+  /* ... keep existing code (animations) */
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
@@ -133,7 +133,7 @@
   }
 }
 
-/* Keyframes Suavizados */
+/* ... keep existing code (keyframes) */
 @keyframes float {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   25% { transform: translateY(-8px) rotate(0.5deg); }
@@ -143,11 +143,11 @@
 
 @keyframes pulseGlow {
   0%, 100% { 
-    box-shadow: 0 0 15px rgba(251, 102, 0, 0.3), 0 0 30px rgba(251, 102, 0, 0.15);
+    box-shadow: 0 0 15px rgba(245, 78, 1, 0.3), 0 0 30px rgba(245, 78, 1, 0.15);
     transform: scale(1);
   }
   50% { 
-    box-shadow: 0 0 25px rgba(251, 102, 0, 0.4), 0 0 45px rgba(251, 102, 0, 0.2);
+    box-shadow: 0 0 25px rgba(245, 78, 1, 0.4), 0 0 45px rgba(245, 78, 1, 0.2);
     transform: scale(1.02);
   }
 }
@@ -195,29 +195,28 @@
   to { transform: rotate(360deg); }
 }
 
-/* Glass Morphism Suavizado */
+/* ... keep existing code (glass morphism and effects) */
 .glass-morphism {
   backdrop-filter: blur(16px) saturate(150%);
   background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(251, 102, 0, 0.15);
+  border: 1px solid rgba(245, 78, 1, 0.15);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .glass-card {
   backdrop-filter: blur(12px) saturate(150%);
   background: rgba(255, 255, 255, 0.96);
-  border: 1px solid rgba(251, 102, 0, 0.1);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08), 0 6px 15px rgba(251, 102, 0, 0.08);
+  border: 1px solid rgba(245, 78, 1, 0.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08), 0 6px 15px rgba(245, 78, 1, 0.08);
 }
 
-/* Efeitos Hover Suavizados */
 .hover-lift {
   transition: all 0.3s ease;
 }
 
 .hover-lift:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 8px 20px rgba(251, 102, 0, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 8px 20px rgba(245, 78, 1, 0.15);
 }
 
 .hover-glow {
@@ -225,11 +224,10 @@
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 25px rgba(251, 102, 0, 0.4), 0 0 50px rgba(251, 102, 0, 0.2);
+  box-shadow: 0 0 25px rgba(245, 78, 1, 0.4), 0 0 50px rgba(245, 78, 1, 0.2);
   transform: scale(1.03);
 }
 
-/* Efeito Particle Refinado */
 .particle-bg {
   position: relative;
   overflow: hidden;
@@ -243,9 +241,9 @@
   right: 0;
   bottom: 0;
   background-image: 
-    radial-gradient(circle at 20% 80%, rgba(251, 102, 0, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(252, 106, 1, 0.06) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(252, 108, 1, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 20% 80%, rgba(245, 78, 1, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(229, 59, 1, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(254, 184, 0, 0.05) 0%, transparent 50%);
   animation: particleFloat 25s ease-in-out infinite;
 }
 
@@ -255,7 +253,6 @@
   66% { transform: translate(-15px, 15px) rotate(180deg); }
 }
 
-/* Animações de Scroll Suavizadas */
 .scroll-reveal {
   opacity: 0;
   transform: translateY(20px);

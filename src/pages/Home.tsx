@@ -1,4 +1,3 @@
-
 import { ArrowRight, Zap, Target, Rocket, CheckCircle, Star, Sparkles, TrendingUp, Users, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -27,7 +26,7 @@ const Home = () => {
       title: "Desenvolvimento Exclusivo",
       description: "Soluções únicas e personalizadas que fazem sua empresa se destacar da concorrência",
       highlight: "100% sob medida",
-      color: "from-fire-accent to-coral-400"
+      color: "from-fire-accent to-fire-primary"
     }
   ];
 
@@ -55,13 +54,6 @@ const Home = () => {
     }
   ];
 
-  const stats = [
-    { number: "500%", label: "Aumento Médio em Conversões", icon: TrendingUp },
-    { number: "200+", label: "Projetos de Sucesso", icon: Award },
-    { number: "48h", label: "Tempo Médio de Resposta", icon: Zap },
-    { number: "100%", label: "Clientes Satisfeitos", icon: Users }
-  ];
-
   const benefits = [
     "Design moderno e irresistível",
     "Otimização para máximas conversões", 
@@ -75,7 +67,7 @@ const Home = () => {
     <div className="overflow-hidden">
       <WhatsAppFloat />
       
-      {/* Hero Section - Com cores laranja refinadas */}
+      {/* Hero Section - Sem os cards de estatísticas */}
       <ScrollReveal direction="fade">
         <section className="relative min-h-screen flex items-center justify-center particle-bg">
           <div className="absolute inset-0 fire-gradient opacity-95"></div>
@@ -111,7 +103,7 @@ const Home = () => {
                 e fazem sua receita explodir
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <Link to="/contato">
                   <Button size="lg" className="bg-white text-fire-dark hover:bg-orange-50 hover:text-fire-primary px-12 py-6 text-xl font-bold hover-lift hover-glow rounded-full shadow-2xl">
                     <Rocket className="mr-3 h-6 w-6" />
@@ -124,19 +116,6 @@ const Home = () => {
                     Ver Cases de Sucesso
                   </Button>
                 </Link>
-              </div>
-
-              {/* Stats Row */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                {stats.map((stat, index) => (
-                  <div key={index} className="text-center animate-scale-in" style={{ animationDelay: `${index * 200}ms` }}>
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full mb-4">
-                      <stat.icon className="h-8 w-8 text-orange-200" />
-                    </div>
-                    <div className="text-3xl md:text-4xl font-bold mb-2">{stat.number}</div>
-                    <div className="text-sm opacity-90 font-medium">{stat.label}</div>
-                  </div>
-                ))}
               </div>
             </div>
           </div>
@@ -258,22 +237,10 @@ const Home = () => {
                     
                     <h3 className="text-3xl font-bold mb-8 text-gray-800">Resultados Extraordinários</h3>
                     
-                    <div className="grid grid-cols-2 gap-8">
-                      <div className="text-center">
-                        <div className="text-4xl font-bold mb-3 fire-text-gradient">500%</div>
-                        <div className="text-sm text-gray-600 font-medium">Aumento em Conversões</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-4xl font-bold mb-3 fire-text-gradient">200+</div>
-                        <div className="text-sm text-gray-600 font-medium">Sucessos Comprovados</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-4xl font-bold mb-3 fire-text-gradient">48h</div>
-                        <div className="text-sm text-gray-600 font-medium">Resposta Garantida</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-4xl font-bold mb-3 fire-text-gradient">100%</div>
-                        <div className="text-sm text-gray-600 font-medium">Satisfação Total</div>
+                    <div className="text-center">
+                      <div className="text-5xl font-bold mb-6 fire-text-gradient">Excelência</div>
+                      <div className="text-lg text-gray-600 font-medium">
+                        Entregamos projetos que transformam negócios e geram resultados excepcionais para nossos clientes
                       </div>
                     </div>
                   </div>
