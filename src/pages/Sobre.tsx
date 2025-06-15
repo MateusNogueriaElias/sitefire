@@ -44,34 +44,6 @@ const Sobre = () => {
     }
   ];
 
-  const milestones = [
-    {
-      year: "Janeiro 2025",
-      title: "O Início",
-      description: "Nascimento da Fire Dominios com a missão de revolucionar a presença digital das empresas"
-    },
-    {
-      year: "Q1 2025",
-      title: "Primeiros Clientes",
-      description: "Conquista dos primeiros clientes e validação do nosso modelo de negócio inovador"
-    },
-    {
-      year: "Q2 2025",
-      title: "Expansão dos Serviços",
-      description: "Ampliação do portfólio com novas soluções digitais e parcerias estratégicas"
-    },
-    {
-      year: "Q3 2025",
-      title: "Crescimento Acelerado",
-      description: "Crescimento exponencial da base de clientes e reconhecimento no mercado"
-    },
-    {
-      year: "Q4 2025",
-      title: "Consolidação",
-      description: "Estabelecimento como referência em soluções digitais e preparação para 2026"
-    }
-  ];
-
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
@@ -170,46 +142,6 @@ const Sobre = () => {
                     <p className="text-gray-600">{value.description}</p>
                   </CardContent>
                 </Card>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal direction="up">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-4">
-                Nossa <span className="fire-text-gradient">Roadmap 2025</span>
-              </h2>
-              <p className="text-xl text-gray-600">
-                O plano estratégico para nosso primeiro ano de operação
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-fire-primary hidden md:block"></div>
-            
-            {milestones.map((milestone, index) => (
-              <ScrollReveal key={index} direction="up" delay={index * 200}>
-                <div className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                  <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8'}`}>
-                    <Card className="hover-lift border-0 shadow-lg">
-                      <CardContent className="p-6">
-                        <div className="text-2xl font-bold text-fire-primary mb-2">{milestone.year}</div>
-                        <h3 className="text-xl font-bold mb-3 font-poppins">{milestone.title}</h3>
-                        <p className="text-gray-600">{milestone.description}</p>
-                      </CardContent>
-                    </Card>
-                  </div>
-                  
-                  <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 fire-gradient rounded-full items-center justify-center">
-                    <Zap className="h-6 w-6 text-white" />
-                  </div>
-                </div>
               </ScrollReveal>
             ))}
           </div>
