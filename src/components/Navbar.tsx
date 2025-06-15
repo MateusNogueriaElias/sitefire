@@ -6,15 +6,32 @@ import { Link, useLocation } from 'react-router-dom';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      const currentScrollY = window.scrollY;
+      
+      // Define se o navbar deve ter fundo ou não
+      setIsScrolled(currentScrollY > 20);
+      
+      // Define se o navbar deve estar visível ou não
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down & not at top
+        setIsVisible(false);
+      } else {
+        // Scrolling up or at top
+        setIsVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
     };
+    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -28,6 +45,8 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled ? 'glass-morphism shadow-2xl py-2' : 'bg-transparent py-4'
+    } ${
+      isVisible ? 'transform translate-y-0' : 'transform -translate-y-full'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">

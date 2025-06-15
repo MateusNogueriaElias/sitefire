@@ -1,4 +1,3 @@
-
 import { ArrowRight, Zap, Target, Rocket, CheckCircle, Star, Sparkles, TrendingUp, Users, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -96,7 +95,7 @@ const Home = () => {
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-poppins mb-8 leading-tight">
               Sua Empresa
-              <span className="block fire-text-glow">Dominando</span>
+              <span className="block text-red-800 font-black drop-shadow-2xl">Dominando</span>
               <span className="block text-yellow-300">a Internet</span>
             </h1>
             
