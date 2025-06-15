@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X, Zap } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -42,7 +41,6 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'Serviços', path: '/servicos' },
     { name: 'Sobre', path: '/sobre' },
-    { name: 'Contato', path: '/contato' },
   ];
 
   return (
@@ -94,9 +92,8 @@ const Navbar = () => {
               onClick={() => handleNavClick('/contato')}
               className="bg-fire-primary text-white px-8 py-3 rounded-full font-semibold hover-lift hover-glow transition-all duration-300 shadow-lg relative overflow-hidden group"
             >
-              <span className="relative z-10 flex items-center space-x-2">
-                <Zap size={18} className="group-hover:animate-bounce-subtle" />
-                <span>Começar Nosso Projeto</span>
+              <span className="relative z-10">
+                Contato
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-fire-accent to-fire-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
@@ -136,10 +133,9 @@ const Navbar = () => {
               ))}
               <button 
                 onClick={() => handleNavClick('/contato')}
-                className="w-full bg-fire-primary text-white px-6 py-4 rounded-xl text-lg font-semibold mt-4 hover-glow transition-all duration-300 flex items-center justify-center space-x-2"
+                className="w-full bg-fire-primary text-white px-6 py-4 rounded-xl text-lg font-semibold mt-4 hover-glow transition-all duration-300 flex items-center justify-center"
               >
-                <Zap size={20} />
-                <span>Começar Nosso Projeto</span>
+                Contato
               </button>
             </div>
           </div>
