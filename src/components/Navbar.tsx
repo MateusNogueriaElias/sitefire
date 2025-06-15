@@ -26,89 +26,100 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled ? 'glass-elegant shadow-xl py-2' : 'bg-transparent py-4'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
+      isScrolled ? 'glass-morphism-ultra shadow-2xl py-2' : 'bg-transparent py-4'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo Elegante */}
-          <Link to="/" className="flex items-center space-x-3 hover-premium group">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Ultra Enhanced Logo */}
+          <Link to="/" className="flex items-center space-x-4 hover-glow-mega group magnetic-effect">
             <div className="relative">
               <img 
                 src="/lovable-uploads/f7ad8c87-e46c-4a74-bbc3-772f8f211c80.png" 
                 alt="Fire Dominios" 
-                className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-110 animate-soft-pulse"
+                className="h-16 w-16 object-contain transition-transform duration-500 group-hover:scale-125 animate-pulse-rainbow"
               />
+              <div className="absolute inset-0 fire-gradient opacity-0 group-hover:opacity-30 rounded-full transition-opacity duration-500 animate-rotate-glow"></div>
+              <div className="absolute -inset-2 fire-gradient opacity-20 rounded-full blur-lg group-hover:opacity-40 transition-opacity duration-500"></div>
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-black font-playfair premium-text group-hover:scale-105 transition-transform duration-300">
+              <span className="text-3xl font-black font-playfair fire-text-mega group-hover:scale-110 transition-transform duration-500 neon-glow">
                 Fire Dominios
               </span>
-              <span className="text-xs text-amber-400 font-semibold tracking-wide animate-elegant-glow">AGÊNCIA PREMIUM</span>
+              <span className="text-sm text-gray-500 font-bold tracking-wide fire-text-gradient">DIGITAL SUPREMACY</span>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
-            {navItems.map((item) => (
+          {/* Ultra Enhanced Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-10">
+            {navItems.map((item, index) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`font-semibold transition-all duration-300 relative group px-3 py-2 rounded-lg hover-premium ${
+                className={`font-black transition-all duration-500 relative group px-6 py-3 rounded-full text-lg ${
                   isActive(item.path)
-                    ? 'premium-text'
-                    : 'text-white hover:text-amber-400'
-                }`}
+                    ? 'text-fire-primary fire-gradient-soft shadow-lg'
+                    : 'text-gray-700 hover:text-fire-primary hover:fire-gradient-soft hover:shadow-lg'
+                } magnetic-effect`}
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 {item.name}
-                <span className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 h-0.5 premium-gradient transition-all duration-300 ${
-                  isActive(item.path) ? 'w-6' : 'w-0 group-hover:w-6'
+                <span className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 h-1 fire-gradient transition-all duration-500 ${
+                  isActive(item.path) ? 'w-10' : 'w-0 group-hover:w-10'
                 } rounded-full`}></span>
+                <div className="absolute inset-0 fire-gradient opacity-0 group-hover:opacity-20 rounded-full transition-opacity duration-500"></div>
               </Link>
             ))}
             <Link to="/contato">
-              <button className="btn-premium text-white px-6 py-3 rounded-xl font-semibold hover-premium transition-all duration-300 shadow-lg">
-                <span className="flex items-center space-x-2">
-                  <Crown size={18} className="animate-soft-pulse" />
-                  <span>COMEÇAR AGORA</span>
+              <button className="btn-fire-mega text-white px-10 py-4 rounded-full font-black hover-lift-mega hover-glow-mega transition-all duration-500 shadow-lg relative overflow-hidden group magnetic-effect text-lg">
+                <span className="relative z-10 flex items-center space-x-3">
+                  <Crown size={20} className="group-hover:animate-bounce-glow" />
+                  <span>DOMINAR AGORA</span>
+                  <Flame size={20} className="group-hover:animate-bounce-glow" />
                 </span>
+                <div className="absolute inset-0 fire-gradient-reverse opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </button>
             </Link>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Ultra Enhanced Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white hover:text-amber-400 transition-colors duration-300 p-2 rounded-lg hover-premium"
+              className="text-gray-700 hover:text-fire-primary transition-all duration-500 p-3 rounded-full hover:fire-gradient-soft magnetic-effect"
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? 
+                <X size={32} className="animate-scale-in-bounce" /> : 
+                <Menu size={32} className="animate-scale-in-bounce" />
+              }
             </button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Ultra Enhanced Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden animate-fade-in-up">
-            <div className="glass-premium rounded-2xl mt-4 p-6 border border-amber-500/20 elegant-border">
-              {navItems.map((item) => (
+          <div className="md:hidden animate-fade-in-up-delayed">
+            <div className="glass-card-ultra rounded-3xl mt-6 p-8 border-2 border-white/40">
+              {navItems.map((item, index) => (
                 <Link
                   key={item.name}
                   to={item.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`block px-4 py-3 text-base font-semibold transition-all duration-300 rounded-lg mb-2 hover-premium ${
+                  className={`block px-6 py-4 text-xl font-black transition-all duration-500 rounded-2xl mb-3 magnetic-effect ${
                     isActive(item.path)
-                      ? 'premium-text elegant-gradient'
-                      : 'text-white hover:text-amber-400 hover:elegant-gradient'
+                      ? 'text-fire-primary fire-gradient-soft shadow-lg'
+                      : 'text-gray-700 hover:text-fire-primary hover:fire-gradient-soft hover:shadow-lg'
                   }`}
+                  style={{ animationDelay: `${index * 150}ms` }}
                 >
                   {item.name}
                 </Link>
               ))}
               <Link to="/contato" onClick={() => setIsMenuOpen(false)}>
-                <button className="w-full btn-premium text-white px-6 py-4 rounded-xl text-base font-semibold mt-4 hover-premium transition-all duration-300 flex items-center justify-center space-x-2">
-                  <Crown size={20} className="animate-soft-pulse" />
-                  <span>COMEÇAR AGORA</span>
+                <button className="w-full btn-fire-mega text-white px-8 py-6 rounded-2xl text-xl font-black mt-6 hover-glow-mega transition-all duration-500 flex items-center justify-center space-x-3 magnetic-effect">
+                  <Crown size={24} className="animate-bounce-glow" />
+                  <span>DOMINAR AGORA</span>
+                  <Flame size={24} className="animate-bounce-glow" />
                 </button>
               </Link>
             </div>
