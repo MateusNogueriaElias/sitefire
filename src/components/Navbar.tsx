@@ -23,6 +23,10 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   const isActive = (path: string) => location.pathname === path;
 
   const navItems = [
@@ -59,9 +63,9 @@ const Navbar = () => {
           {/* Desktop Navigation Enhanced */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item, index) => (
-              <button
+              <Link
                 key={item.name}
-                onClick={scrollToTop}
+                to={item.path}
                 className={`font-semibold transition-all duration-300 relative group px-4 py-2 rounded-full ${
                   isActive(item.path)
                     ? 'text-fire-primary bg-fire-gradient-soft'
@@ -73,7 +77,7 @@ const Navbar = () => {
                 <span className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 h-0.5 bg-gradient-to-r from-fire-primary to-fire-accent transition-all duration-300 ${
                   isActive(item.path) ? 'w-8' : 'w-0 group-hover:w-8'
                 }`}></span>
-              </button>
+              </Link>
             ))}
             <Link to="/contato">
               <button className="fire-gradient text-white px-8 py-3 rounded-full font-semibold hover-lift hover-glow transition-all duration-300 shadow-lg relative overflow-hidden group">
@@ -105,9 +109,10 @@ const Navbar = () => {
           <div className="md:hidden animate-fade-in-up">
             <div className="glass-card rounded-2xl mt-4 p-6 border border-white/30">
               {navItems.map((item, index) => (
-                <button
+                <Link
                   key={item.name}
-                  onClick={scrollToTop}
+                  to={item.path}
+                  onClick={closeMenu}
                   className={`block w-full text-left px-4 py-3 text-lg font-medium transition-all duration-300 rounded-xl mb-2 ${
                     isActive(item.path)
                       ? 'text-fire-primary bg-fire-gradient-soft'
@@ -116,9 +121,9 @@ const Navbar = () => {
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {item.name}
-                </button>
+                </Link>
               ))}
-              <Link to="/contato" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/contato" onClick={closeMenu}>
                 <button className="w-full fire-gradient text-white px-6 py-4 rounded-xl text-lg font-semibold mt-4 hover-glow transition-all duration-300 flex items-center justify-center space-x-2">
                   <Zap size={20} />
                   <span>Começar Projeto</span>
