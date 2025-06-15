@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X, Zap } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -82,7 +81,7 @@ const Navbar = () => {
                 className={`font-semibold transition-all duration-300 relative group px-4 py-2 rounded-full ${
                   isActive(item.path)
                     ? 'text-fire-primary bg-fire-gradient-soft'
-                    : `${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-fire-primary hover:bg-fire-gradient-soft`
+                    : `${isScrolled ? 'text-gray-700' : 'text-gray-700'} hover:text-fire-primary hover:bg-fire-gradient-soft`
                 }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
