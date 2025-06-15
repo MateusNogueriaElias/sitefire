@@ -1,5 +1,4 @@
-
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -12,11 +11,11 @@ const Footer = () => {
             <div className="flex items-center space-x-2">
               <img 
                 src="/lovable-uploads/f7ad8c87-e46c-4a74-bbc3-772f8f211c80.png" 
-                alt="Fire Dominios" 
+                alt="Fire Domínios" 
                 className="h-10 w-10 object-contain"
               />
               <span className="text-xl font-bold font-poppins fire-text-gradient">
-                Fire Dominios
+                Fire Domínios
               </span>
             </div>
             <p className="text-gray-300 text-sm">
@@ -40,7 +39,12 @@ const Footer = () => {
               >
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-fire-primary transition-colors duration-300">
+              <a 
+                href="https://www.linkedin.com/in/fire-dom%C3%ADnios/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-fire-primary transition-colors duration-300"
+              >
                 <Linkedin size={20} />
               </a>
             </div>
@@ -108,7 +112,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 Fire Dominios. Todos os direitos reservados.
+              @2025 Fire Domínios todos os direitos reservados.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-fire-primary text-sm transition-colors duration-300">

@@ -1,10 +1,9 @@
-
-import { ArrowRight, Zap, Target, Rocket, CheckCircle, Star, Sparkles, TrendingUp, Users, Award } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import ScrollReveal from '@/components/ScrollReveal';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import ScrollReveal from '@/components/ScrollReveal';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
+import { ArrowRight, Award, CheckCircle, Rocket, Sparkles, Target, TrendingUp, Users, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const services = [
@@ -113,7 +112,7 @@ const Home = () => {
                 </div>
                 
                 <h2 className="text-4xl md:text-6xl font-bold font-poppins mb-6">
-                  Mostre ao mundo o seu melhor — <span className="fire-text-gradient">crie seu site com a FireDomínios!</span>
+                  Mostre ao mundo o seu melhor — <span className="fire-text-gradient">crie seu site com a Fire Domínios!</span>
                 </h2>
               </div>
             </ScrollReveal>
@@ -168,7 +167,7 @@ const Home = () => {
                 <div className="animate-fade-in-up">
                   <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-2 mb-8">
                     <Award className="h-4 w-4 mr-2 text-orange-200" />
-                    <span className="text-sm font-medium">Por que Fire Dominios?</span>
+                    <span className="text-sm font-medium">Por que Fire Domínios?</span>
                   </div>
                   
                   <h2 className="text-4xl md:text-5xl font-bold font-poppins mb-8 leading-tight">

@@ -1,13 +1,12 @@
-
-import { useState } from 'react';
-import { MessageCircle, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { MessageCircle, X } from 'lucide-react';
+import { useState } from 'react';
 
 const WhatsAppFloat = () => {
   const [isOpen, setIsOpen] = useState(false);
   
-  const phoneNumber = "5511999999999"; // Substitua pelo número real do WhatsApp
-  const message = "Olá! Gostaria de saber mais sobre os serviços da Fire Dominios.";
+  const phoneNumber = "5511972492813"; // Número atualizado do footer, sem formatação
+  const message = "Olá! Gostaria de saber mais sobre os serviços da Fire Domínios.";
   
   const handleWhatsAppClick = () => {
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -20,11 +19,11 @@ const WhatsAppFloat = () => {
         <div className="mb-4 mr-2 bg-white rounded-xl shadow-2xl p-4 max-w-xs animate-fade-in glass-card">
           <div className="flex justify-between items-start mb-3">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+              <div className="w-8 h-8 fire-gradient rounded-full flex items-center justify-center">
                 <MessageCircle className="h-4 w-4 text-white" />
               </div>
               <div>
-                <h3 className="font-semibold text-sm">Fire Dominios</h3>
+                <h3 className="font-semibold text-sm">Fire Domínios</h3>
                 <p className="text-xs text-gray-500">Online agora</p>
               </div>
             </div>
@@ -42,7 +41,7 @@ const WhatsAppFloat = () => {
           </p>
           <Button
             onClick={handleWhatsAppClick}
-            className="w-full bg-green-500 hover:bg-green-600 text-white text-sm py-2"
+            className="w-full fire-gradient text-white text-sm py-2"
           >
             Iniciar Conversa
           </Button>
@@ -51,13 +50,13 @@ const WhatsAppFloat = () => {
       
       <Button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-green-500 hover:bg-green-600 text-white rounded-full w-14 h-14 shadow-2xl hover-lift animate-pulse-glow"
+        className="bg-gradient-to-r from-orange-500 to-orange-600 hover:brightness-110 text-white rounded-full w-24 h-24 shadow-2xl hover-lift animate-pulse-subtle flex items-center justify-center"
         size="icon"
       >
         {isOpen ? (
-          <X className="h-6 w-6" />
+          <X className="h-16 w-16" />
         ) : (
-          <MessageCircle className="h-6 w-6" />
+          <MessageCircle className="h-16 w-16" strokeWidth={1.5} />
         )}
       </Button>
     </div>

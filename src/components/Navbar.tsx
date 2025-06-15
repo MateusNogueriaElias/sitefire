@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { Menu, X, Zap } from 'lucide-react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,6 +40,7 @@ const Navbar = () => {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Serviços', path: '/servicos' },
+    { name: 'Portfólio', path: 'https://portifólio.firedominios.com', external: true },
     { name: 'Sobre', path: '/sobre' },
   ];
 
@@ -54,14 +55,14 @@ const Navbar = () => {
             <div className="relative">
               <img 
                 src="/lovable-uploads/f7ad8c87-e46c-4a74-bbc3-772f8f211c80.png" 
-                alt="Fire Dominios" 
+                alt="Fire Domínios" 
                 className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-fire-primary to-fire-accent opacity-0 group-hover:opacity-20 rounded-full transition-opacity duration-300"></div>
             </div>
             <div className="flex flex-col">
               <span className="text-2xl font-bold font-poppins fire-text-gradient group-hover:scale-105 transition-transform duration-300">
-                Fire Dominios
+                Fire Domínios
               </span>
               <span className="text-xs font-medium tracking-wide text-gray-600 transition-colors duration-300">
                 Digital Excellence
@@ -72,21 +73,35 @@ const Navbar = () => {
           {/* Desktop Navigation Enhanced */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item, index) => (
-              <button
-                key={item.name}
-                onClick={() => handleNavClick(item.path)}
-                className={`font-semibold transition-all duration-300 relative group px-4 py-2 rounded-full ${
-                  isActive(item.path)
-                    ? 'text-fire-primary bg-fire-gradient-soft'
-                    : 'text-gray-700 hover:text-fire-primary hover:bg-fire-gradient-soft'
-                }`}
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                {item.name}
-                <span className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 h-0.5 bg-gradient-to-r from-fire-primary to-fire-accent transition-all duration-300 ${
-                  isActive(item.path) ? 'w-8' : 'w-0 group-hover:w-8'
-                }`}></span>
-              </button>
+              item.external ? (
+                <a
+                  key={item.name}
+                  href={item.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`font-semibold transition-all duration-300 relative group px-4 py-2 rounded-full text-gray-700 hover:text-fire-primary hover:bg-fire-gradient-soft`}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  {item.name}
+                  <span className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 h-0.5 bg-gradient-to-r from-fire-primary to-fire-accent transition-all duration-300 w-0 group-hover:w-8`}></span>
+                </a>
+              ) : (
+                <button
+                  key={item.name}
+                  onClick={() => handleNavClick(item.path)}
+                  className={`font-semibold transition-all duration-300 relative group px-4 py-2 rounded-full ${
+                    isActive(item.path)
+                      ? 'text-fire-primary bg-fire-gradient-soft'
+                      : 'text-gray-700 hover:text-fire-primary hover:bg-fire-gradient-soft'
+                  }`}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  {item.name}
+                  <span className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 h-0.5 bg-gradient-to-r from-fire-primary to-fire-accent transition-all duration-300 ${
+                    isActive(item.path) ? 'w-8' : 'w-0 group-hover:w-8'
+                  }`}></span>
+                </button>
+              )
             ))}
             <button 
               onClick={() => handleNavClick('/contato')}
@@ -118,18 +133,32 @@ const Navbar = () => {
           <div className="md:hidden animate-fade-in-up">
             <div className="glass-card rounded-2xl mt-4 p-6 border border-white/30">
               {navItems.map((item, index) => (
-                <button
-                  key={item.name}
-                  onClick={() => handleNavClick(item.path)}
-                  className={`block w-full text-left px-4 py-3 text-lg font-medium transition-all duration-300 rounded-xl mb-2 ${
-                    isActive(item.path)
-                      ? 'text-fire-primary bg-fire-gradient-soft'
-                      : 'text-gray-700 hover:text-fire-primary hover:bg-fire-gradient-soft'
-                  }`}
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  {item.name}
-                </button>
+                item.external ? (
+                  <a
+                    key={item.name}
+                    href={item.path}
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block w-full text-left px-4 py-3 text-lg font-medium transition-all duration-300 rounded-xl mb-2 text-gray-700 hover:text-fire-primary hover:bg-fire-gradient-soft"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                    onClick={closeMenu}
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <button
+                    key={item.name}
+                    onClick={() => handleNavClick(item.path)}
+                    className={`block w-full text-left px-4 py-3 text-lg font-medium transition-all duration-300 rounded-xl mb-2 ${
+                      isActive(item.path)
+                        ? 'text-fire-primary bg-fire-gradient-soft'
+                        : 'text-gray-700 hover:text-fire-primary hover:bg-fire-gradient-soft'
+                    }`}
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    {item.name}
+                  </button>
+                )
               ))}
               <button 
                 onClick={() => handleNavClick('/contato')}

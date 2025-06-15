@@ -1,6 +1,6 @@
-import { Users, Award, Lightbulb, Heart, Target, Zap, Rocket, Focus, Handshake } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
 import ScrollReveal from '@/components/ScrollReveal';
+import { Card, CardContent } from '@/components/ui/card';
+import { Focus, Handshake, Rocket, Users, Zap } from 'lucide-react';
 
 const Sobre = () => {
   const values = [
@@ -52,7 +52,7 @@ const Sobre = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal direction="up">
             <h1 className="text-4xl md:text-6xl font-bold font-poppins mb-6">
-              Sobre a <span className="text-yellow-300">Fire Dominios</span>
+              Sobre a <span className="text-yellow-300">Fire Domínios</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
               Uma nova era na criação de experiências digitais extraordinárias começa agora em 2025
@@ -70,7 +70,7 @@ const Sobre = () => {
                 Nossa <span className="fire-text-gradient">História</span>
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                A Fire Dominios nasce em 2025 com uma visão revolucionária: toda empresa 
+                A Fire Domínios nasce em 2025 com uma visão revolucionária: toda empresa 
                 merece uma presença digital que não apenas impressiona, mas que transforma 
                 visitantes em clientes fiéis e impulsiona resultados reais.
               </p>
