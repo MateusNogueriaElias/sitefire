@@ -116,7 +116,7 @@ const Home = () => {
                   </Button>
                 </Link>
                 <Link to="/servicos">
-                  <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-fire-primary px-12 py-6 text-xl font-bold hover-lift rounded-full backdrop-blur-sm">
+                  <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-fire-primary px-12 py-6 text-xl font-bold hover-lift rounded-full backdrop-blur-sm bg-transparent">
                     Ver Cases de Sucesso
                   </Button>
                 </Link>
@@ -365,7 +365,7 @@ const Home = () => {
                     </Button>
                   </Link>
                   <Link to="/servicos">
-                    <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-fire-primary px-12 py-6 text-xl font-bold hover-lift rounded-full backdrop-blur-sm">
+                    <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-fire-primary px-12 py-6 text-xl font-bold hover-lift rounded-full backdrop-blur-sm bg-transparent">
                       Ver Todos os Serviços
                     </Button>
                   </Link>
