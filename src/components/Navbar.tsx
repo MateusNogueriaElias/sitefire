@@ -6,32 +6,22 @@ import { Link, useLocation } from 'react-router-dom';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
-      // Define se o navbar deve ter fundo ou não
       setIsScrolled(currentScrollY > 20);
-      
-      // Define se o navbar deve estar visível ou não
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down & not at top
-        setIsVisible(false);
-      } else {
-        // Scrolling up or at top
-        setIsVisible(true);
-      }
-      
-      setLastScrollY(currentScrollY);
     };
     
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsMenuOpen(false);
+  };
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -45,13 +35,11 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled ? 'glass-morphism shadow-2xl py-2' : 'bg-transparent py-4'
-    } ${
-      isVisible ? 'transform translate-y-0' : 'transform -translate-y-full'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo Enhanced */}
-          <Link to="/" className="flex items-center space-x-3 hover-glow group">
+          <button onClick={scrollToTop} className="flex items-center space-x-3 hover-glow group">
             <div className="relative">
               <img 
                 src="/lovable-uploads/f7ad8c87-e46c-4a74-bbc3-772f8f211c80.png" 
@@ -66,14 +54,14 @@ const Navbar = () => {
               </span>
               <span className="text-xs text-gray-500 font-medium tracking-wide">Digital Excellence</span>
             </div>
-          </Link>
+          </button>
 
           {/* Desktop Navigation Enhanced */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item, index) => (
-              <Link
+              <button
                 key={item.name}
-                to={item.path}
+                onClick={scrollToTop}
                 className={`font-semibold transition-all duration-300 relative group px-4 py-2 rounded-full ${
                   isActive(item.path)
                     ? 'text-fire-primary bg-fire-gradient-soft'
@@ -85,7 +73,7 @@ const Navbar = () => {
                 <span className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 h-0.5 bg-gradient-to-r from-fire-primary to-fire-accent transition-all duration-300 ${
                   isActive(item.path) ? 'w-8' : 'w-0 group-hover:w-8'
                 }`}></span>
-              </Link>
+              </button>
             ))}
             <Link to="/contato">
               <button className="fire-gradient text-white px-8 py-3 rounded-full font-semibold hover-lift hover-glow transition-all duration-300 shadow-lg relative overflow-hidden group">
@@ -117,11 +105,10 @@ const Navbar = () => {
           <div className="md:hidden animate-fade-in-up">
             <div className="glass-card rounded-2xl mt-4 p-6 border border-white/30">
               {navItems.map((item, index) => (
-                <Link
+                <button
                   key={item.name}
-                  to={item.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`block px-4 py-3 text-lg font-medium transition-all duration-300 rounded-xl mb-2 ${
+                  onClick={scrollToTop}
+                  className={`block w-full text-left px-4 py-3 text-lg font-medium transition-all duration-300 rounded-xl mb-2 ${
                     isActive(item.path)
                       ? 'text-fire-primary bg-fire-gradient-soft'
                       : 'text-gray-700 hover:text-fire-primary hover:bg-fire-gradient-soft'
@@ -129,7 +116,7 @@ const Navbar = () => {
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {item.name}
-                </Link>
+                </button>
               ))}
               <Link to="/contato" onClick={() => setIsMenuOpen(false)}>
                 <button className="w-full fire-gradient text-white px-6 py-4 rounded-xl text-lg font-semibold mt-4 hover-glow transition-all duration-300 flex items-center justify-center space-x-2">
