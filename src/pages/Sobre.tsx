@@ -28,19 +28,19 @@ const Sobre = () => {
 
   const team = [
     {
-      name: "Gabriel Fire",
+      name: "Mateus Elias",
       role: "CEO & Founder",
-      description: "Visionário apaixonado por transformação digital, dedicado a criar soluções que fazem a diferença"
+      description: "Visionário focado em transformar desafios de negócio em sucesso digital. Minha missão é garantir que cada projeto não seja apenas um site, mas uma ferramenta de crescimento real para a sua empresa."
     },
     {
-      name: "Marina Code",
+      name: "Samuel Romão",
       role: "Head de Desenvolvimento",
-      description: "Especialista em desenvolvimento web com foco em performance e experiência do usuário"
+      description: "Especialista em desenvolvimento web focado em performance e segurança. Construo sites rápidos e otimizados que convertem visitantes em clientes e garantem uma experiência impecável em qualquer dispositivo."
     },
     {
-      name: "Lucas Design",
+      name: "Lucas Bernardo",
       role: "Creative Director",
-      description: "Designer criativo especializado em criar identidades visuais marcantes e funcionais"
+      description: "Designer criativo que desenvolve identidades visuais marcantes. Crio um design que não apenas é bonito, mas que comunica o valor da sua marca, gera confiança e atrai o público certo."
     }
   ];
 
