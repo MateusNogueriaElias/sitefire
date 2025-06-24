@@ -348,7 +348,7 @@ const Contato = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 
-                href="https://wa.me/5511972492813" 
+                href="https://wa.me/5511991627189" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-white text-fire-primary hover:bg-gray-100 px-8 py-4 rounded-full text-lg font-semibold hover-lift transition-all duration-300"
