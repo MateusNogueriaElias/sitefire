@@ -43,60 +43,59 @@ const Home = () => {
     <div className="overflow-hidden">
       <WhatsAppFloat />
       
-      {/* Hero Section */}
-      <ScrollReveal direction="fade">
-        <section className="relative min-h-screen flex items-center justify-center particle-bg">
-          <div className="absolute inset-0 fire-gradient opacity-95"></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-black/10"></div>
-          
-          {/* Floating Elements */}
-          <div className="absolute top-20 left-10 animate-float">
-            <Sparkles className="h-16 w-16 text-orange-200 opacity-60" />
-          </div>
-          <div className="absolute top-1/3 right-20 animate-float" style={{ animationDelay: '2s' }}>
-            <Zap className="h-20 w-20 text-white opacity-40" />
-          </div>
-          <div className="absolute bottom-1/4 left-1/4 animate-float" style={{ animationDelay: '4s' }}>
-            <Target className="h-12 w-12 text-orange-200 opacity-50" />
-          </div>
+      {/* Alteração: Hero Section sem animação de entrada para otimizar LCP */}
+      <section className="relative min-h-screen flex items-center justify-center particle-bg">
+        <div className="absolute inset-0 fire-gradient opacity-95"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-black/10"></div>
+        
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 animate-float">
+          <Sparkles className="h-16 w-16 text-orange-200 opacity-60" />
+        </div>
+        <div className="absolute top-1/3 right-20 animate-float" style={{ animationDelay: '2s' }}>
+          <Zap className="h-20 w-20 text-white opacity-40" />
+        </div>
+        <div className="absolute bottom-1/4 left-1/4 animate-float" style={{ animationDelay: '4s' }}>
+          <Target className="h-12 w-12 text-orange-200 opacity-50" />
+        </div>
 
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-            <div className="animate-fade-in-up">
-              <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-2 mb-8">
-                <Sparkles className="h-4 w-4 mr-2 text-orange-200" />
-                <span className="text-sm font-medium">Agência Digital #1 em Resultados</span>
-              </div>
-              
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-poppins mb-8 leading-tight">
-                Sua Empresa
-                <span className="block text-orange-200 font-black drop-shadow-2xl">Dominando</span>
-                <span className="block text-orange-100">a Internet</span>
-              </h1>
-              
-              <p className="text-xl md:text-3xl mb-12 max-w-4xl mx-auto opacity-95 font-light leading-relaxed">
-                Criamos sites que não apenas impressionam, mas 
-                <span className="font-bold text-orange-200"> transformam visitantes em clientes fiéis</span> 
-                e fazem sua receita explodir
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <Link to="/contato">
-                  <Button size="lg" className="bg-white text-fire-dark hover:bg-orange-50 hover:text-fire-primary px-12 py-6 text-xl font-bold hover-lift hover-glow rounded-full shadow-2xl">
-                    <Rocket className="mr-3 h-6 w-6" />
-                    Começar Nosso Projeto
-                    <ArrowRight className="ml-3 h-6 w-6" />
-                  </Button>
-                </Link>
-                <Link to="/servicos">
-                  <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-fire-primary px-12 py-6 text-xl font-bold hover-lift rounded-full backdrop-blur-sm bg-transparent">
-                    Ver Cases de Sucesso
-                  </Button>
-                </Link>
-              </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+          {/* Alteração: Removido o div com a classe "animate-fade-in-up" */}
+          <div>
+            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-2 mb-8">
+              <Sparkles className="h-4 w-4 mr-2 text-orange-200" />
+              <span className="text-sm font-medium">Agência Digital #1 em Resultados</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-poppins mb-8 leading-tight">
+              Sua Empresa
+              <span className="block text-orange-200 font-black ">Dominando</span>
+              <span className="block text-orange-100">a Internet</span>
+            </h1>
+            
+            <p className="text-xl md:text-3xl mb-12 max-w-4xl mx-auto opacity-95 font-light leading-relaxed">
+              Criamos sites que não apenas impressionam, mas 
+              <span className="font-bold text-orange-200"> transformam visitantes em clientes fiéis</span> 
+              e fazem sua receita explodir
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Link to="/contato">
+                <Button size="lg" className="bg-white text-fire-dark hover:bg-orange-50 hover:text-fire-primary px-12 py-6 text-xl font-bold hover-lift hover-glow rounded-full shadow-2xl">
+                  <Rocket className="mr-3 h-6 w-6" />
+                  Começar Nosso Projeto
+                  <ArrowRight className="ml-3 h-6 w-6" />
+                </Button>
+              </Link>
+              <Link to="/servicos">
+                <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-fire-primary px-12 py-6 text-xl font-bold hover-lift rounded-full backdrop-blur-sm bg-transparent">
+                  Ver Cases de Sucesso
+                </Button>
+              </Link>
             </div>
           </div>
-        </section>
-      </ScrollReveal>
+        </div>
+      </section>
 
       {/* Services Section - Enhanced */}
       <ScrollReveal direction="up" delay={200}>

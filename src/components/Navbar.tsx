@@ -57,6 +57,7 @@ const Navbar = () => {
                 src="/lovable-uploads/f7ad8c87-e46c-4a74-bbc3-772f8f211c80.png" 
                 alt="Fire Domínios" 
                 className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-fire-primary to-fire-accent opacity-0 group-hover:opacity-20 rounded-full transition-opacity duration-300"></div>
             </div>
@@ -116,9 +117,11 @@ const Navbar = () => {
 
           {/* Mobile menu button Enhanced */}
           <div className="md:hidden">
+            {/* Alteração: Adicionado aria-label para acessibilidade */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="transition-all duration-300 p-2 rounded-full hover:bg-fire-gradient-soft text-gray-700 hover:text-fire-primary"
+              aria-label={isMenuOpen ? "Fechar menu de navegação" : "Abrir menu de navegação"}
             >
               {isMenuOpen ? 
                 <X size={28} className="animate-scale-in" /> : 

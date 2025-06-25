@@ -23,26 +23,32 @@ const Footer = () => {
               Seu sucesso online começa aqui.
             </p>
             <div className="flex space-x-4">
+              {/* Alteração: Adicionado aria-label para acessibilidade */}
               <a 
                 href="https://www.facebook.com/share/19DCpcWD2M/" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                aria-label="Siga-nos no Facebook"
                 className="text-gray-400 hover:text-fire-primary transition-colors duration-300"
               >
                 <Facebook size={20} />
               </a>
+              {/* Alteração: Adicionado aria-label para acessibilidade */}
               <a 
                 href="https://www.instagram.com/firedominios/" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                aria-label="Siga-nos no Instagram"
                 className="text-gray-400 hover:text-fire-primary transition-colors duration-300"
               >
                 <Instagram size={20} />
               </a>
+              {/* Alteração: Adicionado aria-label para acessibilidade */}
               <a 
                 href="https://www.linkedin.com/in/fire-dom%C3%ADnios/" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                aria-label="Conecte-se conosco no LinkedIn"
                 className="text-gray-400 hover:text-fire-primary transition-colors duration-300"
               >
                 <Linkedin size={20} />
