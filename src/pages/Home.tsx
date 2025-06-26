@@ -72,7 +72,7 @@ const Home = memo(() => {
               <span className="block text-orange-100">a Internet</span>
             </h1>
             
-            <p className="text-lg sm:text-xl md:text-3xl mb-8 sm:mb-12 max-w-4xl mx-auto opacity-95 font-light leading-relaxed px-4 sm:px-0">
+            <p className="font-sans text-lg sm:text-xl md:text-3xl mb-8 sm:mb-12 max-w-4xl mx-auto  font-light leading-relaxed px-4 sm:px-0">
               Criamos sites que não apenas impressionam, mas 
               <span className="font-bold text-orange-200"> transformam visitantes em clientes fiéis </span> 
               e fazem sua receita explodir
