@@ -75,19 +75,19 @@ const Contato = () => {
 
   const contactInfo = [
     {
-      icon: <Mail className="h-6 w-6 text-fire-primary" />,
+      icon: <Mail className="h-6 w-6 text-white" />,
       title: "E-mail",
       content: "suporte@firedominios.com",
       description: "Resposta em até 2 horas"
     },
     {
-      icon: <Phone className="h-6 w-6 text-fire-primary" />,
+      icon: <Phone className="h-6 w-6 text-white" />,
       title: "WhatsApp",
-      content: "(11) 97249-2813",
+      content: "(11) 99162-7189",
       description: "Seg à Sex, 9h às 18h"
     },
     {
-      icon: <MapPin className="h-6 w-6 text-fire-primary" />,
+      icon: <MapPin className="h-6 w-6 text-white" />,
       title: "Localização",
       content: "São Paulo, SP",
       description: "Atendimento em todo Brasil"

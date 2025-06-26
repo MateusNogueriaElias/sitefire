@@ -1,7 +1,6 @@
 import ScrollReveal from '@/components/ScrollReveal';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import WhatsAppFloat from '@/components/WhatsAppFloat';
 import { ArrowRight, Award, CheckCircle, Rocket, Sparkles, Target, TrendingUp, Users, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -41,7 +40,6 @@ const Home = () => {
 
   return (
     <div className="overflow-hidden">
-      <WhatsAppFloat />
       
       {/* Alteração: Hero Section sem animação de entrada para otimizar LCP */}
       <section className="relative min-h-screen flex items-center justify-center particle-bg">
@@ -69,7 +67,7 @@ const Home = () => {
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-poppins mb-8 leading-tight">
               Sua Empresa
-              <span className="block text-orange-200 font-black ">Dominando</span>
+              <span className="block text-orange-200 font-black">Dominando</span>
               <span className="block text-orange-100">a Internet</span>
             </h1>
             
